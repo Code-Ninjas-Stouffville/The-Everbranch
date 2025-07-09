@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 4dbe4a22fa77d30488d69df075a2894d
+guid: cf9bf9a4bfc9c4145a8f96774c688733
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1883722067842618412
-    second: The Everbranch_0
-  - first:
-      213: -6362905265656105225
-    second: The Everbranch_1
+      213: 8957324059118975939
+    second: images_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: The Everbranch_0
+      name: images_0
       rect:
         serializedVersion: 2
-        x: 119
-        y: 992
-        width: 244
-        height: 201
+        x: 0
+        y: 0
+        width: 225
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4db2daa72ccabd5e0800000000000000
-      internalID: -1883722067842618412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: The Everbranch_1
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 129
-        width: 1748
-        height: 1145
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7f6fa1d7f5b62b7a0800000000000000
-      internalID: -6362905265656105225
+      spriteID: 3cbb8d916cece4c70800000000000000
+      internalID: 8957324059118975939
       vertices: []
       indices: 
       edges: []
@@ -172,9 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      The Everbranch_0: -1883722067842618412
-      The Everbranch_1: -6362905265656105225
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

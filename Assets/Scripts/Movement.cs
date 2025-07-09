@@ -13,11 +13,12 @@ public class Movement : MonoBehaviour
     public int movementSpeed = 5;
 
     [Header("Stick Stats")]
-    public string What = "Stick";
+    public string What = "";
     public int Tier = 0;
     public int damage = 1;
     public int attackSpeed = 2;
     public int range = 0; //0 is melee
+    private SceneSwitch info;
 
     [Header("Stick Location")]
     public float stickX = 1f;
@@ -35,6 +36,7 @@ public class Movement : MonoBehaviour
         movementDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         stick.position = transform.position + new Vector3(Input.GetAxis("Horizontal") * stickX, Input.GetAxis("Vertical") * 0.1f + stickY, -1);
         cam.position = transform.position + new Vector3(0,0,-10);
+        What = info.Weapon;
     }
 
     void FixedUpdate()
