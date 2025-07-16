@@ -15,14 +15,11 @@ public class Movement : MonoBehaviour
     [Header("Stick Stats")]
     public string What = "";
     public int Tier = 0;
-    public int damage = 1;
+    public int damage = 10;
     public int attackSpeed = 2;
-    public int range = 0; //0 is melee
+    public int spinSpeed = 10;
+    public int range = 1;
     private SceneSwitch info;
-
-    [Header("Stick Location")]
-    public float stickX = 1f;
-    public float stickY = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +31,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         movementDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        stick.position = transform.position + new Vector3(Input.GetAxis("Horizontal") * stickX, Input.GetAxis("Vertical") * 0.1f + stickY, -1);
+        stick.position = transform.position + new Vector3(Input.GetAxis("Horizontal") * range, Input.GetAxis("Vertical") * range, -1);
         cam.position = transform.position + new Vector3(0,0,-10);
         What = info.Weapon;
     }
