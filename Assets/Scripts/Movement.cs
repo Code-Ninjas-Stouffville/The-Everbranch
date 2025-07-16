@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     public string What = "";
     public int Tier = 0;
     public int damage = 10;
-    public int attackSpeed = 2;
+    public float attackSpeed = 2f;
     public int spinSpeed = 10;
     public int range = 1;
     private SceneSwitch info;
@@ -30,7 +30,15 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movementDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (Input.GetKey(KeyCode.LeftShift) == false)
+        {
+            movementDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        }
+        else
+        {
+            movementDir = new Vector2(0, 0);
+        }
+
         stick.position = transform.position + new Vector3(Input.GetAxis("Horizontal") * range, Input.GetAxis("Vertical") * range, -1);
         cam.position = transform.position + new Vector3(0,0,-10);
         What = info.Weapon;
