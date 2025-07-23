@@ -8,6 +8,8 @@ public class Attack : MonoBehaviour
     public bool isAttack = false;
     public Movement movement;
 
+    public WeaponStats weaponStats;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
