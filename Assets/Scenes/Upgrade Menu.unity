@@ -882,7 +882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  Weapon: 
+  Weapon: Stick
 --- !u!4 &2038827061
 Transform:
   m_ObjectHideFlags: 0

@@ -21,14 +21,14 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && cooldown <= 0f)
         {
-            cooldown = movement.attackSpeed;
-            gameObject.transform.Rotate(0, 0, movement.spinSpeed);
+            cooldown = weaponStats.currentWeapon.attackSpeed;
+            gameObject.transform.Rotate(0, 0, weaponStats.currentWeapon.spinSpeed);
             isAttack = true;
         }
 
         if (gameObject.transform.rotation.eulerAngles.z > 1 || gameObject.transform.rotation.eulerAngles.z < -1)
         {
-            gameObject.transform.Rotate(0, 0, movement.spinSpeed);
+            gameObject.transform.Rotate(0, 0, weaponStats.currentWeapon.spinSpeed);
         }
         else
         {

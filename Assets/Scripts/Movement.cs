@@ -32,9 +32,8 @@ public class Movement : MonoBehaviour
             movementDir = new Vector2(0, 0);
         }
 
-        //stick.position = transform.position + new Vector3(Input.GetAxis("Horizontal") * range, Input.GetAxis("Vertical") * range, -1);
+        stick.position = transform.position + new Vector3(Input.GetAxis("Horizontal") * weaponStats.currentWeapon.range, Input.GetAxis("Vertical") * weaponStats.currentWeapon.range, -1);
         cam.position = transform.position + new Vector3(0,0,-10);
-        //What = SceneSwitch.Instance.Weapon;
     }
 
     void FixedUpdate()
