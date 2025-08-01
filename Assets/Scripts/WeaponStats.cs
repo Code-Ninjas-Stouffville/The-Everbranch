@@ -6,8 +6,9 @@ public class Weapon {
     public WeaponType type;
     public int damage = 10;
     public float attackSpeed = 2f;
+    public int knockback = 1;
     [Header("Use for Melee Weapon")]
-    public int spinSpeed = 10;
+    public int spinSpeed = 360;
     public int range = 1;
     [Header("Use for Range Weapon")]
     public int projectSpeed = 0;
@@ -35,10 +36,6 @@ public class WeaponStats : MonoBehaviour
             if (SceneSwitch.Instance.Weapon == weapon[i].name)
             {
                 currentWeapon= weapon[i];
-                if (currentWeapon.type == WeaponType.Range)
-                {
-
-                }
             }
         }
     }

@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     public int movementSpeed = 5;
 
     public WeaponStats weaponStats;
+
+    public Transform WeaponPivot;
     //public WeaponStats ws;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,17 +25,22 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) == false)
-        {
-            movementDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        }
-        else
-        {
-            movementDir = new Vector2(0, 0);
-        }
-
-        stick.position = transform.position + new Vector3(Input.GetAxis("Horizontal") * weaponStats.currentWeapon.range, Input.GetAxis("Vertical") * weaponStats.currentWeapon.range, -1);
+        movementDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         cam.position = transform.position + new Vector3(0,0,-10);
+
+        // Get mouse position in world space
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPosition.z = 0f; // Ensure z is zero for 2D
+
+        // Calculate direction from character to mouse
+        Vector3 direction = mouseWorldPosition - WeaponPivot.position;
+
+        // Calculate angle and apply rotation
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        WeaponPivot.rotation = Quaternion.Euler(0f, 0f, angle);
+
+
+
     }
 
     void FixedUpdate()
