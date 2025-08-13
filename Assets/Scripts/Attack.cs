@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
@@ -12,56 +12,69 @@ public class Attack : MonoBehaviour
     private Quaternion originalLocalRotation;
     public float attackTimer;
 
+    public Transform weaponPivot;
+
+    // Speeds (tweak in Inspector)
+    public float pushOutSpeed = 25f;
+    public float retractSpeed = 25f;
+
     void Start()
     {
         originalLocalPosition = transform.localPosition;
         originalLocalRotation = transform.localRotation;
     }
+
     void Update()
     {
-        // Start attack if space is pressed and cooldown is ready
+        // Mouse world pos (2D)
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPosition.z = 0f;
+
+        // Direction & distance from pivot to mouse (2D)
+        Vector3 direction = mouseWorldPosition - weaponPivot.position;
+        direction.z = 0f;
+        float distanceToMouse = direction.magnitude;
+
+        // Clamp to weapon range (use float, not int!)
+        float maxReach = (float)weaponStats.currentWeapon.range;
+        float targetReach = Mathf.Min(distanceToMouse, maxReach);
+
+        // Start attack once per key press
         if (Input.GetKey(KeyCode.Space) && cooldown <= 0f)
         {
             cooldown = weaponStats.currentWeapon.attackSpeed;
             isAttacking = true;
             rotationAccumulated = 0f;
+            attackTimer = 0f;
         }
 
         if (isAttacking)
         {
-            float rotationStep = weaponStats.currentWeapon.spinSpeed * 360 * Time.deltaTime;
+            // Spin the weapon
+            float rotationStep = weaponStats.currentWeapon.spinSpeed * 360f * Time.deltaTime;
             transform.Rotate(0f, 0f, rotationStep);
             rotationAccumulated += rotationStep;
-
             attackTimer += Time.deltaTime;
 
-            // Push weapon outward
-            if (rotationAccumulated <= 360f)
+            // Extend along the pivot's local +X toward the cursor distance (clamped)
+            // Keep Y/Z from the original local position
+            Vector3 targetLocal = originalLocalPosition + Vector3.right * targetReach;
+            transform.localPosition = Vector3.Lerp(transform.localPosition, targetLocal, Time.deltaTime * pushOutSpeed);
+
+            // End after one spin or a small time window
+            if (rotationAccumulated >= 360f || attackTimer >= 0.5f)
             {
-                Vector3 pos = transform.localPosition;
-                pos.x = Mathf.Lerp(pos.x, weaponStats.currentWeapon.range, Time.deltaTime * 25); // Faster push
-                transform.localPosition = pos;
-            }
-            if (attackTimer >= 0.5)
-            {
-                isAttacking = false;    
+                isAttacking = false;
             }
         }
         else
         {
-            attackTimer = 0;
-            // Return weapon to original position
-            Vector3 pos = transform.localPosition;
-            pos.x = Mathf.Lerp(pos.x, originalLocalPosition.x, Time.deltaTime * 25f); // Smooth return
-            transform.rotation = originalLocalRotation;
-            transform.localPosition = pos;
+            // Retract & reset
+            transform.localPosition = Vector3.Lerp(transform.localPosition, originalLocalPosition, Time.deltaTime * retractSpeed);
+            transform.localRotation = originalLocalRotation; // use local rotation (matches what we stored)
         }
 
-        // Cooldown countdown
-        if (cooldown > 0f)
-        {
-            cooldown -= Time.deltaTime;
-        }
+        // Cooldown
+        if (cooldown > 0f) cooldown -= Time.deltaTime;
     }
-
 }

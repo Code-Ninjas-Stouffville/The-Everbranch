@@ -154,290 +154,497 @@ MonoBehaviour:
     damage: 10
     attackSpeed: 2
     knockback: 1
+    DoT: 0
     spinSpeed: 3
     range: 1
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Sword
     type: 0
     damage: 15
     attackSpeed: 2
     knockback: 1
+    DoT: 0
     spinSpeed: 3
     range: 1
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Spear
     type: 0
     damage: 10
     attackSpeed: 1.5
     knockback: 1
+    DoT: 0
     spinSpeed: 0
     range: 3
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Long Sword
     type: 0
     damage: 15
     attackSpeed: 2
     knockback: 2
+    DoT: 0
     spinSpeed: 3
     range: 2
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Axe
     type: 0
     damage: 20
     attackSpeed: 3
     knockback: 1
+    DoT: 0
     spinSpeed: 3
     range: 2
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Glaive
     type: 0
     damage: 15
     attackSpeed: 1.5
     knockback: 1
+    DoT: 0
     spinSpeed: 0
     range: 4
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Trident
     type: 1
     damage: 10
     attackSpeed: 1.5
     knockback: 1
+    DoT: 0
     spinSpeed: 0
     range: 0
     projectSpeed: 15
     spread: 1
+    pierce: 2
   - name: Great Sword
     type: 0
     damage: 20
     attackSpeed: 3
     knockback: 3
+    DoT: 0
     spinSpeed: 2
     range: 2
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Katana
     type: 0
     damage: 25
     attackSpeed: 0.5
     knockback: 1
+    DoT: 0
     spinSpeed: 5
     range: 1
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Reaper
     type: 0
     damage: 5
     attackSpeed: 0.1
     knockback: 2
+    DoT: 0
     spinSpeed: 0
     range: 1
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Hatchet
     type: 0
     damage: 10
     attackSpeed: 0.5
     knockback: 1
+    DoT: 0
     spinSpeed: 3
     range: 5
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: War Axe
     type: 0
     damage: 25
     attackSpeed: 5
     knockback: 3
+    DoT: 0
     spinSpeed: 1
     range: 1
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Scyth
     type: 0
     damage: 50
     attackSpeed: 1
     knockback: 1
+    DoT: 0
     spinSpeed: 3
     range: 3
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Punch
     type: 0
     damage: 100
     attackSpeed: 2
     knockback: 3
+    DoT: 0
     spinSpeed: 0
     range: 2
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Pitchfork
     type: 1
     damage: 75
     attackSpeed: 1
     knockback: 1
+    DoT: 0
     spinSpeed: 0
     range: 0
     projectSpeed: 10
     spread: 1
+    pierce: 2
   - name: Claymore
     type: 0
     damage: 150
     attackSpeed: 7
     knockback: 5
+    DoT: 0
     spinSpeed: 1
     range: 2
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Odachi
     type: 0
     damage: 75
     attackSpeed: 0.5
     knockback: 1
+    DoT: 0
     spinSpeed: 7
     range: 2
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Syringe
     type: 0
     damage: 5
-    attackSpeed: 1
+    attackSpeed: 0
     knockback: 1
+    DoT: 1
     spinSpeed: 0
     range: 1
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Throwing Axe
-    type: 0
+    type: 1
     damage: 25
     attackSpeed: 0.5
     knockback: 1
+    DoT: 0
     spinSpeed: 0
     range: 0
     projectSpeed: 15
     spread: 10
+    pierce: 1
   - name: HackSaw
     type: 0
     damage: 50
     attackSpeed: 0
     knockback: 1
+    DoT: 0
     spinSpeed: 0
     range: 3
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: 'Executioner''s Axe '
     type: 0
     damage: 200
     attackSpeed: 20
     knockback: 4
+    DoT: 0
     spinSpeed: 0
     range: 0
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: halberd
     type: 0
     damage: 100
     attackSpeed: 2
     knockback: 2
+    DoT: 0
     spinSpeed: 0
     range: 3
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Double - Bladed Scythe
     type: 0
     damage: 100
     attackSpeed: 1
     knockback: 1
+    DoT: 0
     spinSpeed: 5
     range: 0
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Soul Harvester
     type: 0
     damage: 150
     attackSpeed: 3
     knockback: 1
+    DoT: 0
     spinSpeed: 1
     range: 4
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Rapid Jab
     type: 0
     damage: 50
     attackSpeed: 0.1
     knockback: 1
+    DoT: 0
     spinSpeed: 0
     range: 2
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Knockout punch
     type: 0
     damage: 200
     attackSpeed: 5
     knockback: 5
+    DoT: 0
     spinSpeed: 0
     range: 3
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Tremor Shot
     type: 0
     damage: 200
     attackSpeed: 5
     knockback: 5
+    DoT: 0
     spinSpeed: 0
     range: 3
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: Echo Strike
     type: 1
     damage: 100
     attackSpeed: 5
     knockback: 3
+    DoT: 1
     spinSpeed: 0
     range: 0
     projectSpeed: 15
     spread: 1
+    pierce: 2
   - name: Poseidon
     type: 1
     damage: 100
     attackSpeed: 5
     knockback: 3
+    DoT: 0
     spinSpeed: 0
     range: 0
     projectSpeed: 15
     spread: 1
+    pierce: 3
   - name: Voidbound Cleiver
     type: 0
     damage: 10
     attackSpeed: 5
     knockback: 0
+    DoT: 10
     spinSpeed: 1
     range: 4
     projectSpeed: 0
     spread: 0
+    pierce: 0
   - name: 'Broken Blade '
     type: 0
     damage: 1
     attackSpeed: 1
     knockback: 1
+    DoT: 0
     spinSpeed: 1
     range: 1
     projectSpeed: 0
     spread: 0
+    pierce: 0
+  - name: Salmonella
+    type: 1
+    damage: 10
+    attackSpeed: 1
+    knockback: 0
+    DoT: 10
+    spinSpeed: 0
+    range: 0
+    projectSpeed: 10
+    spread: 0
+    pierce: 0
+  - name: Cancer
+    type: 1
+    damage: 100
+    attackSpeed: 1
+    knockback: 0
+    DoT: 5
+    spinSpeed: 0
+    range: 0
+    projectSpeed: 10
+    spread: 0
+    pierce: 1
+  - name: Dart
+    type: 1
+    damage: 25
+    attackSpeed: 0.5
+    knockback: 0
+    DoT: 5
+    spinSpeed: 0
+    range: 0
+    projectSpeed: 10
+    spread: 0
+    pierce: 1
+  - name: Chainsaw
+    type: 1
+    damage: 25
+    attackSpeed: 0
+    knockback: 0
+    DoT: 0
+    spinSpeed: 0
+    range: 1
+    projectSpeed: 0
+    spread: 0
+    pierce: 0
+  - name: Rope
+    type: 0
+    damage: 25
+    attackSpeed: 2
+    knockback: 5
+    DoT: 0
+    spinSpeed: 0
+    range: 4
+    projectSpeed: 0
+    spread: 0
+    pierce: 0
+  - name: The Living Axe
+    type: 0
+    damage: 100
+    attackSpeed: 1
+    knockback: 1
+    DoT: 0
+    spinSpeed: 5
+    range: 10
+    projectSpeed: 0
+    spread: 0
+    pierce: 0
+  - name: Death's Embrace
+    type: 0
+    damage: 0
+    attackSpeed: 3
+    knockback: 1
+    DoT: 100
+    spinSpeed: 5
+    range: 3
+    projectSpeed: 0
+    spread: 0
+    pierce: 0
+  - name: Combo
+    type: 0
+    damage: 250
+    attackSpeed: 0.1
+    knockback: 3
+    DoT: 0
+    spinSpeed: 0
+    range: 4
+    projectSpeed: 0
+    spread: 0
+    pierce: 0
+  - name: "Leviathan\u2019s Pulse"
+    type: 1
+    damage: 150
+    attackSpeed: 1
+    knockback: 5
+    DoT: 10
+    spinSpeed: 0
+    range: 4
+    projectSpeed: 0
+    spread: 0
+    pierce: 5
+  - name: Black Hole Singularity
+    type: 1
+    damage: 150
+    attackSpeed: 10
+    knockback: -5
+    DoT: 25
+    spinSpeed: 0
+    range: 0
+    projectSpeed: 0
+    spread: 0
+    pierce: 9999
+  - name: Thousand Demon Dagger
+    type: 0
+    damage: 500
+    attackSpeed: 0
+    knockback: 1
+    DoT: 100
+    spinSpeed: 5
+    range: 5
+    projectSpeed: 0
+    spread: 0
+    pierce: 0
+  - name: Coughing Baby
+    type: 1
+    damage: 100
+    attackSpeed: 0
+    knockback: 1
+    DoT: 100
+    spinSpeed: 0
+    range: 0
+    projectSpeed: 25
+    spread: 0
+    pierce: 10
+  - name: Chainsaw Juggling
+    type: 1
+    damage: 25
+    attackSpeed: 0.1
+    knockback: 1
+    DoT: 25
+    spinSpeed: 0
+    range: 0
+    projectSpeed: 10
+    spread: 25
+    pierce: 3
   currentWeapon:
     name: 
     type: 0
-    damage: 50
-    attackSpeed: 0.1
-    knockback: 1
+    damage: 25
+    attackSpeed: 0
+    knockback: 0
+    DoT: 0
     spinSpeed: 0
-    range: 2
+    range: 1
     projectSpeed: 0
     spread: 0
+    pierce: 0
 --- !u!4 &24757400
 Transform:
   m_ObjectHideFlags: 0
@@ -540,6 +747,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &104135999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 104136000}
+  - component: {fileID: 104136001}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &104136000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104135999}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2122474371}
+  m_Father: {fileID: 672800832}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &104136001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104135999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa541796fef2ec4192c162ca1d71479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0
+  isAttacking: 0
+  rotationAccumulated: 0
+  movement: {fileID: 263441006}
+  weaponStats: {fileID: 24757399}
+  attackTimer: 0
+  weaponPivot: {fileID: 104136000}
+  pushOutSpeed: 25
+  retractSpeed: 25
 --- !u!114 &263441006 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7827683998464439116, guid: ed86169a1cc6e9d458177149f532e270, type: 3}
@@ -580,7 +841,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2122474371}
+  - {fileID: 104136000}
   m_Father: {fileID: 1842876690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1747099055
@@ -608,6 +869,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2122474371}
     - target: {fileID: 7827683998464439116, guid: ed86169a1cc6e9d458177149f532e270, type: 3}
+      propertyPath: Weapon
+      value: 
+      objectReference: {fileID: 104136000}
+    - target: {fileID: 7827683998464439116, guid: ed86169a1cc6e9d458177149f532e270, type: 3}
       propertyPath: damage
       value: 10
       objectReference: {fileID: 0}
@@ -631,6 +896,10 @@ PrefabInstance:
       propertyPath: weaponStats
       value: 
       objectReference: {fileID: 24757399}
+    - target: {fileID: 7827683998464439116, guid: ed86169a1cc6e9d458177149f532e270, type: 3}
+      propertyPath: attackManager
+      value: 
+      objectReference: {fileID: 104136001}
     - target: {fileID: 8481186148041999140, guid: ed86169a1cc6e9d458177149f532e270, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.78021955
@@ -827,7 +1096,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 672800832}
+    m_TransformParent: {fileID: 104136000}
     m_Modifications:
     - target: {fileID: 2168015242566886318, guid: b4ae12c52bbec2140aceb0d0fa9764ac, type: 3}
       propertyPath: m_Name
@@ -835,15 +1104,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588286625796305331, guid: b4ae12c52bbec2140aceb0d0fa9764ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3588286625796305331, guid: b4ae12c52bbec2140aceb0d0fa9764ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.010000005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3588286625796305331, guid: b4ae12c52bbec2140aceb0d0fa9764ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3588286625796305331, guid: b4ae12c52bbec2140aceb0d0fa9764ac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -876,39 +1145,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2168015242566886318, guid: b4ae12c52bbec2140aceb0d0fa9764ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2122474372}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4ae12c52bbec2140aceb0d0fa9764ac, type: 3}
---- !u!1 &2122474369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2168015242566886318, guid: b4ae12c52bbec2140aceb0d0fa9764ac, type: 3}
-  m_PrefabInstance: {fileID: 1879811360}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2122474371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3588286625796305331, guid: b4ae12c52bbec2140aceb0d0fa9764ac, type: 3}
   m_PrefabInstance: {fileID: 1879811360}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2122474372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122474369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aa541796fef2ec4192c162ca1d71479, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 0
-  isAttacking: 0
-  rotationAccumulated: 0
-  movement: {fileID: 263441006}
-  weaponStats: {fileID: 24757399}
-  attackTimer: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

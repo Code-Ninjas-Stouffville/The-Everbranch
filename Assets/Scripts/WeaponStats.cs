@@ -7,12 +7,14 @@ public class Weapon {
     public int damage = 10;
     public float attackSpeed = 2f;
     public int knockback = 1;
+    public int DoT = 0;
     [Header("Use for Melee Weapon")]
     public int spinSpeed = 360;
     public int range = 1;
     [Header("Use for Range Weapon")]
     public int projectSpeed = 0;
     public int spread = 0;
+    public int pierce = 0;
 
 }
 public enum WeaponType {
