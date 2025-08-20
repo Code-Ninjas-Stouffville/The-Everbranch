@@ -380,7 +380,7 @@ MonoBehaviour:
     projectSpeed: 0
     spread: 0
     pierce: 0
-  - name: halberd
+  - name: Halberd
     type: 0
     damage: 100
     attackSpeed: 2
@@ -424,7 +424,7 @@ MonoBehaviour:
     projectSpeed: 0
     spread: 0
     pierce: 0
-  - name: Knockout punch
+  - name: Knockout Punch
     type: 0
     damage: 200
     attackSpeed: 5
@@ -633,6 +633,17 @@ MonoBehaviour:
     projectSpeed: 10
     spread: 25
     pierce: 3
+  - name: "Executioner\u2019s Will"
+    type: 0
+    damage: 150
+    attackSpeed: 0.1
+    knockback: 2
+    DoT: 0
+    spinSpeed: 5
+    range: 5
+    projectSpeed: 0
+    spread: 0
+    pierce: 0
   currentWeapon:
     name: 
     type: 0
