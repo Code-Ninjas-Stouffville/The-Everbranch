@@ -13,8 +13,10 @@ public class Weapon {
     public int range = 1;
     [Header("Use for Range Weapon")]
     public int projectSpeed = 0;
-    public int spread = 0;
+    public float spread = 0;
     public int pierce = 0;
+
+    public GameObject bullet;
 
 }
 public enum WeaponType {

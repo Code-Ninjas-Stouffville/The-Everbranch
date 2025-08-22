@@ -50,22 +50,37 @@ public class Attack : MonoBehaviour
 
         if (isAttacking)
         {
-            // Spin the weapon
-            float rotationStep = weaponStats.currentWeapon.spinSpeed * 360f * Time.deltaTime;
-            transform.Rotate(0f, 0f, rotationStep);
-            rotationAccumulated += rotationStep;
-            attackTimer += Time.deltaTime;
 
-            // Extend along the pivot's local +X toward the cursor distance (clamped)
-            // Keep Y/Z from the original local position
-            Vector3 targetLocal = originalLocalPosition + Vector3.right * targetReach;
-            transform.localPosition = Vector3.Lerp(transform.localPosition, targetLocal, Time.deltaTime * pushOutSpeed);
-
-            // End after one spin or a small time window
-            if (rotationAccumulated >= 360f || attackTimer >= 0.5f)
+            if (weaponStats.currentWeapon.type == WeaponType.Melee)
             {
+                // Spin the weapon
+                float rotationStep = weaponStats.currentWeapon.spinSpeed * 360f * Time.deltaTime;
+                transform.Rotate(0f, 0f, rotationStep);
+                rotationAccumulated += rotationStep;
+                attackTimer += Time.deltaTime;
+
+                // Extend along the pivot's local +X toward the cursor distance (clamped)
+                // Keep Y/Z from the original local position
+                Vector3 targetLocal = originalLocalPosition + Vector3.right * targetReach;
+                transform.localPosition = Vector3.Lerp(transform.localPosition, targetLocal, Time.deltaTime * pushOutSpeed);
+
+                // End after one spin or a small time window
+                if (rotationAccumulated >= 360f || attackTimer >= 0.5f)
+                {
+                    isAttacking = false;
+                }
+            } 
+            else
+            {
+                GameObject bullet = Instantiate(weaponStats.currentWeapon.bullet, transform.position, Quaternion.identity);
+
+                float spread = weaponStats.currentWeapon.spread;
+                Vector3 randSpread = direction.normalized + new Vector3(Random.Range(-spread * 0.1f, spread * 0.1f), Random.Range(-spread * 0.1f, spread * 0.1f),0);
+
+                bullet.GetComponent<Rigidbody2D>().linearVelocity = randSpread * weaponStats.currentWeapon.projectSpeed;
                 isAttacking = false;
             }
+            
         }
         else
         {
