@@ -155,6 +155,7 @@ MonoBehaviour:
     attackSpeed: 2
     knockback: 1
     DoT: 0
+    Cost: 0
     spinSpeed: 3
     range: 1
     projectSpeed: 0
@@ -167,6 +168,7 @@ MonoBehaviour:
     attackSpeed: 2
     knockback: 1
     DoT: 0
+    Cost: 10
     spinSpeed: 3
     range: 1
     projectSpeed: 0
@@ -179,6 +181,7 @@ MonoBehaviour:
     attackSpeed: 1.5
     knockback: 1
     DoT: 0
+    Cost: 25
     spinSpeed: 0
     range: 3
     projectSpeed: 0
@@ -191,6 +194,7 @@ MonoBehaviour:
     attackSpeed: 2
     knockback: 2
     DoT: 0
+    Cost: 30
     spinSpeed: 3
     range: 2
     projectSpeed: 0
@@ -203,6 +207,7 @@ MonoBehaviour:
     attackSpeed: 3
     knockback: 1
     DoT: 0
+    Cost: 25
     spinSpeed: 3
     range: 2
     projectSpeed: 0
@@ -215,6 +220,7 @@ MonoBehaviour:
     attackSpeed: 1.5
     knockback: 1
     DoT: 0
+    Cost: 75
     spinSpeed: 0
     range: 4
     projectSpeed: 0
@@ -227,6 +233,7 @@ MonoBehaviour:
     attackSpeed: 1.5
     knockback: 1
     DoT: 0
+    Cost: 100
     spinSpeed: 0
     range: 0
     projectSpeed: 15
@@ -239,6 +246,7 @@ MonoBehaviour:
     attackSpeed: 3
     knockback: 3
     DoT: 0
+    Cost: 100
     spinSpeed: 2
     range: 2
     projectSpeed: 0
@@ -251,18 +259,20 @@ MonoBehaviour:
     attackSpeed: 0.5
     knockback: 1
     DoT: 0
+    Cost: 125
     spinSpeed: 5
     range: 1
     projectSpeed: 0
     spread: 0
     pierce: 0
     bullet: {fileID: 0}
-  - name: Reaper
+  - name: Rapier
     type: 0
     damage: 5
     attackSpeed: 0.1
     knockback: 2
     DoT: 0
+    Cost: 70
     spinSpeed: 0
     range: 1
     projectSpeed: 0
@@ -275,6 +285,7 @@ MonoBehaviour:
     attackSpeed: 0.5
     knockback: 1
     DoT: 0
+    Cost: 70
     spinSpeed: 3
     range: 5
     projectSpeed: 0
@@ -287,6 +298,7 @@ MonoBehaviour:
     attackSpeed: 5
     knockback: 3
     DoT: 0
+    Cost: 80
     spinSpeed: 1
     range: 1
     projectSpeed: 0
@@ -298,7 +310,8 @@ MonoBehaviour:
     damage: 50
     attackSpeed: 1
     knockback: 1
-    DoT: 0
+    DoT: 2
+    Cost: 150
     spinSpeed: 3
     range: 3
     projectSpeed: 0
@@ -311,6 +324,7 @@ MonoBehaviour:
     attackSpeed: 2
     knockback: 3
     DoT: 0
+    Cost: 120
     spinSpeed: 0
     range: 2
     projectSpeed: 0
@@ -323,6 +337,7 @@ MonoBehaviour:
     attackSpeed: 1
     knockback: 1
     DoT: 0
+    Cost: 120
     spinSpeed: 0
     range: 0
     projectSpeed: 10
@@ -335,6 +350,7 @@ MonoBehaviour:
     attackSpeed: 7
     knockback: 5
     DoT: 0
+    Cost: 200
     spinSpeed: 1
     range: 2
     projectSpeed: 0
@@ -347,6 +363,7 @@ MonoBehaviour:
     attackSpeed: 0.5
     knockback: 1
     DoT: 0
+    Cost: 250
     spinSpeed: 7
     range: 2
     projectSpeed: 0
@@ -359,6 +376,7 @@ MonoBehaviour:
     attackSpeed: 0
     knockback: 1
     DoT: 1
+    Cost: 75
     spinSpeed: 0
     range: 1
     projectSpeed: 0
@@ -371,6 +389,7 @@ MonoBehaviour:
     attackSpeed: 0.5
     knockback: 1
     DoT: 0
+    Cost: 90
     spinSpeed: 0
     range: 0
     projectSpeed: 15
@@ -383,6 +402,7 @@ MonoBehaviour:
     attackSpeed: 0
     knockback: 1
     DoT: 0
+    Cost: 130
     spinSpeed: 0
     range: 3
     projectSpeed: 0
@@ -395,6 +415,7 @@ MonoBehaviour:
     attackSpeed: 20
     knockback: 4
     DoT: 0
+    Cost: 200
     spinSpeed: 0
     range: 0
     projectSpeed: 0
@@ -407,6 +428,7 @@ MonoBehaviour:
     attackSpeed: 2
     knockback: 2
     DoT: 0
+    Cost: 150
     spinSpeed: 0
     range: 3
     projectSpeed: 0
@@ -419,6 +441,7 @@ MonoBehaviour:
     attackSpeed: 1
     knockback: 1
     DoT: 0
+    Cost: 350
     spinSpeed: 5
     range: 0
     projectSpeed: 0
@@ -430,7 +453,8 @@ MonoBehaviour:
     damage: 150
     attackSpeed: 3
     knockback: 1
-    DoT: 0
+    DoT: 5
+    Cost: 300
     spinSpeed: 1
     range: 4
     projectSpeed: 0
@@ -443,6 +467,7 @@ MonoBehaviour:
     attackSpeed: 0.1
     knockback: 1
     DoT: 0
+    Cost: 200
     spinSpeed: 0
     range: 2
     projectSpeed: 0
@@ -455,6 +480,7 @@ MonoBehaviour:
     attackSpeed: 5
     knockback: 5
     DoT: 0
+    Cost: 200
     spinSpeed: 0
     range: 3
     projectSpeed: 0
@@ -467,6 +493,7 @@ MonoBehaviour:
     attackSpeed: 5
     knockback: 5
     DoT: 0
+    Cost: 250
     spinSpeed: 0
     range: 3
     projectSpeed: 0
@@ -479,6 +506,7 @@ MonoBehaviour:
     attackSpeed: 5
     knockback: 3
     DoT: 1
+    Cost: 240
     spinSpeed: 0
     range: 0
     projectSpeed: 15
@@ -491,6 +519,7 @@ MonoBehaviour:
     attackSpeed: 5
     knockback: 3
     DoT: 0
+    Cost: 250
     spinSpeed: 0
     range: 0
     projectSpeed: 15
@@ -503,6 +532,7 @@ MonoBehaviour:
     attackSpeed: 5
     knockback: 0
     DoT: 10
+    Cost: 400
     spinSpeed: 1
     range: 4
     projectSpeed: 0
@@ -515,6 +545,7 @@ MonoBehaviour:
     attackSpeed: 1
     knockback: 0
     DoT: 0
+    Cost: 10
     spinSpeed: 1
     range: 1
     projectSpeed: 0
@@ -527,6 +558,7 @@ MonoBehaviour:
     attackSpeed: 1
     knockback: 0
     DoT: 10
+    Cost: 666
     spinSpeed: 0
     range: 0
     projectSpeed: 10
@@ -539,6 +571,7 @@ MonoBehaviour:
     attackSpeed: 1
     knockback: 0
     DoT: 5
+    Cost: 666
     spinSpeed: 0
     range: 0
     projectSpeed: 10
@@ -551,6 +584,7 @@ MonoBehaviour:
     attackSpeed: 0.5
     knockback: 0
     DoT: 5
+    Cost: 250
     spinSpeed: 0
     range: 0
     projectSpeed: 10
@@ -563,6 +597,7 @@ MonoBehaviour:
     attackSpeed: 0
     knockback: 0
     DoT: 0
+    Cost: 0
     spinSpeed: 0
     range: 1
     projectSpeed: 0
@@ -575,6 +610,7 @@ MonoBehaviour:
     attackSpeed: 2
     knockback: 5
     DoT: 0
+    Cost: 0
     spinSpeed: 0
     range: 4
     projectSpeed: 0
@@ -587,6 +623,7 @@ MonoBehaviour:
     attackSpeed: 1
     knockback: 1
     DoT: 0
+    Cost: 0
     spinSpeed: 5
     range: 10
     projectSpeed: 0
@@ -599,6 +636,7 @@ MonoBehaviour:
     attackSpeed: 3
     knockback: 1
     DoT: 100
+    Cost: 0
     spinSpeed: 5
     range: 3
     projectSpeed: 0
@@ -611,6 +649,7 @@ MonoBehaviour:
     attackSpeed: 0.1
     knockback: 3
     DoT: 0
+    Cost: 0
     spinSpeed: 0
     range: 4
     projectSpeed: 0
@@ -623,6 +662,7 @@ MonoBehaviour:
     attackSpeed: 1
     knockback: 5
     DoT: 10
+    Cost: 0
     spinSpeed: 0
     range: 4
     projectSpeed: 0
@@ -635,6 +675,7 @@ MonoBehaviour:
     attackSpeed: 10
     knockback: -5
     DoT: 25
+    Cost: 0
     spinSpeed: 0
     range: 0
     projectSpeed: 0
@@ -647,6 +688,7 @@ MonoBehaviour:
     attackSpeed: 0
     knockback: 1
     DoT: 100
+    Cost: 0
     spinSpeed: 5
     range: 5
     projectSpeed: 0
@@ -659,6 +701,7 @@ MonoBehaviour:
     attackSpeed: 0
     knockback: 1
     DoT: 100
+    Cost: 0
     spinSpeed: 0
     range: 0
     projectSpeed: 25
@@ -671,6 +714,7 @@ MonoBehaviour:
     attackSpeed: 0.1
     knockback: 1
     DoT: 25
+    Cost: 0
     spinSpeed: 0
     range: 0
     projectSpeed: 10
@@ -683,6 +727,7 @@ MonoBehaviour:
     attackSpeed: 0.1
     knockback: 2
     DoT: 0
+    Cost: 0
     spinSpeed: 5
     range: 5
     projectSpeed: 0
@@ -696,6 +741,7 @@ MonoBehaviour:
     attackSpeed: 0
     knockback: 0
     DoT: 0
+    Cost: 0
     spinSpeed: 0
     range: 1
     projectSpeed: 10
