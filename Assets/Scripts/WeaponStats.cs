@@ -37,7 +37,7 @@ public class WeaponStats : MonoBehaviour
     {
         for (int i=0 ; i< weapon.Length; i++)
         {
-            if (SceneSwitch.Instance.Weapon == weapon[i].name)
+            if (GameManager.Instance.Weapon == weapon[i].name)
             {
                 currentWeapon= weapon[i];
             }

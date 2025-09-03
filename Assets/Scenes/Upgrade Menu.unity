@@ -457,6 +457,18 @@ MonoBehaviour:
           m_StringArgument: Chainsaw
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 200
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &47734412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,6 +520,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 200
+  bought: 0
+  need: 1
 --- !u!1 &63741499
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +864,18 @@ MonoBehaviour:
           m_StringArgument: Salmonella
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 250
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &108336781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -901,6 +927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 250
+  bought: 0
+  need: 1
 --- !u!1 &118472891
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,6 +1003,142 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118472891}
+  m_CullTransparentMesh: 1
+--- !u!1 &123205767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 123205768}
+  - component: {fileID: 123205770}
+  - component: {fileID: 123205769}
+  m_Layer: 0
+  m_Name: CostOfThing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &123205768
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123205767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1162092613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.6, y: 2}
+  m_SizeDelta: {x: 186.4, y: 50.350998}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &123205769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123205767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Hello
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 861c5255cc7b4a048b25b090a3c38822, type: 2}
+  m_sharedMaterial: {fileID: -8169135733661572886, guid: 861c5255cc7b4a048b25b090a3c38822, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 19.614105, y: 0, z: 26.573944, w: -13.91983}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &123205770
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123205767}
   m_CullTransparentMesh: 1
 --- !u!1 &126315115
 GameObject:
@@ -1264,85 +1428,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145294529}
   m_CullTransparentMesh: 1
---- !u!1 &146530411
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 146530412}
-  - component: {fileID: 146530414}
-  - component: {fileID: 146530413}
-  m_Layer: 0
-  m_Name: CostOfThing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &146530412
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146530411}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1162092613}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.0401001, y: -1.0401001}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &146530413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146530411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: New Text
---- !u!222 &146530414
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146530411}
-  m_CullTransparentMesh: 1
 --- !u!1 &153075000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,6 +1537,18 @@ MonoBehaviour:
           m_StringArgument: Great Sword
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 40
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &153075003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,6 +1600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 40
+  bought: 0
+  need: 1
 --- !u!1 &198656627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,6 +2305,18 @@ MonoBehaviour:
           m_StringArgument: Executioner's Will
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1300
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &254928045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2257,6 +2368,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1300
+  bought: 0
+  need: 1
 --- !u!1 &271431727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,6 +2560,18 @@ MonoBehaviour:
           m_StringArgument: Knockout Punch
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 175
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &283060718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2498,6 +2623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 175
+  bought: 0
+  need: 1
 --- !u!1 &283633144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,7 +2659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -395.32874, y: 263.45532}
+  m_AnchoredPosition: {x: -388, y: 263.45532}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &307823943
@@ -2644,6 +2771,18 @@ MonoBehaviour:
           m_StringArgument: Syringe
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 70
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &307823946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2695,6 +2834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 70
+  bought: 0
+  need: 1
 --- !u!1 &346918817
 GameObject:
   m_ObjectHideFlags: 0
@@ -3343,6 +3484,18 @@ MonoBehaviour:
           m_StringArgument: Axe
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 25
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &397849852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3394,6 +3547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 25
+  bought: 0
+  need: 1
 --- !u!1 &402392479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3582,6 +3737,18 @@ MonoBehaviour:
           m_StringArgument: Odachi
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 125
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &424014348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3633,6 +3800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 125
+  bought: 0
+  need: 1
 --- !u!1 &432619479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3902,6 +4071,18 @@ MonoBehaviour:
           m_StringArgument: Hacksaw
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 80
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &472013786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3953,6 +4134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 80
+  bought: 0
+  need: 1
 --- !u!1 &480296619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,6 +4399,18 @@ MonoBehaviour:
           m_StringArgument: Tremor Shot
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 180
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &483221619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4267,6 +4462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 180
+  bought: 0
+  need: 1
 --- !u!1 &508507064
 GameObject:
   m_ObjectHideFlags: 0
@@ -4376,6 +4573,18 @@ MonoBehaviour:
           m_StringArgument: Glaive
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 30
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &508507067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4427,6 +4636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 30
+  bought: 0
+  need: 1
 --- !u!1 &514239011
 GameObject:
   m_ObjectHideFlags: 0
@@ -4694,6 +4905,18 @@ MonoBehaviour:
           m_StringArgument: Claymore
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 110
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &546515707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4745,6 +4968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 110
+  bought: 0
+  need: 1
 --- !u!1 &562489923
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,6 +5079,18 @@ MonoBehaviour:
           m_StringArgument: Pitchfork
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 70
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &562489926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4905,6 +5142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 70
+  bought: 0
+  need: 1
 --- !u!1 &567850115
 GameObject:
   m_ObjectHideFlags: 0
@@ -5014,6 +5253,18 @@ MonoBehaviour:
           m_StringArgument: Dart
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 175
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &567850118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5065,6 +5316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 175
+  bought: 0
+  need: 1
 --- !u!1 &609860333
 GameObject:
   m_ObjectHideFlags: 0
@@ -5174,6 +5427,18 @@ MonoBehaviour:
           m_StringArgument: Chainsaw Juggling
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1200
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &609860336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5225,6 +5490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1200
+  bought: 0
+  need: 1
 --- !u!1 &616017049
 GameObject:
   m_ObjectHideFlags: 0
@@ -5806,6 +6073,18 @@ MonoBehaviour:
           m_StringArgument: Hatchet
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 35
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &724016682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5857,6 +6136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 35
+  bought: 0
+  need: 1
 --- !u!1 &746998526
 GameObject:
   m_ObjectHideFlags: 0
@@ -5868,6 +6149,7 @@ GameObject:
   - component: {fileID: 746998529}
   - component: {fileID: 746998528}
   - component: {fileID: 746998527}
+  - component: {fileID: 746998530}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5949,6 +6231,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &746998530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746998526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &780558859
 GameObject:
   m_ObjectHideFlags: 0
@@ -6100,6 +6426,18 @@ MonoBehaviour:
           m_StringArgument: Stick
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &795777013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6151,6 +6489,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  bought: 0
+  need: 1
 --- !u!1 &797059745
 GameObject:
   m_ObjectHideFlags: 0
@@ -6495,6 +6835,18 @@ MonoBehaviour:
           m_StringArgument: Sword
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &831432755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6546,6 +6898,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 10
+  bought: 0
+  need: 1
 --- !u!1 &872863044
 GameObject:
   m_ObjectHideFlags: 0
@@ -6655,6 +7009,18 @@ MonoBehaviour:
           m_StringArgument: Broken Blade
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &872863047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6706,6 +7072,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 10
+  bought: 0
+  need: 1
 --- !u!1 &881685765
 GameObject:
   m_ObjectHideFlags: 0
@@ -6965,6 +7333,18 @@ MonoBehaviour:
           m_StringArgument: Long Sword
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 30
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &893644754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7016,6 +7396,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 30
+  bought: 0
+  need: 1
 --- !u!1 &922364295
 GameObject:
   m_ObjectHideFlags: 0
@@ -7204,6 +7586,18 @@ MonoBehaviour:
           m_StringArgument: Poseidon
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 180
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &938503494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7255,6 +7649,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 180
+  bought: 0
+  need: 1
 --- !u!1 &945175893
 GameObject:
   m_ObjectHideFlags: 0
@@ -7593,6 +7989,18 @@ MonoBehaviour:
           m_StringArgument: Loyalty
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 80
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &964009334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7644,6 +8052,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 80
+  bought: 0
+  need: 1
 --- !u!1 &991035083
 GameObject:
   m_ObjectHideFlags: 0
@@ -8498,6 +8908,7 @@ GameObject:
   - component: {fileID: 1162092613}
   - component: {fileID: 1162092615}
   - component: {fileID: 1162092614}
+  - component: {fileID: 1162092616}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -8517,7 +8928,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 146530412}
+  - {fileID: 123205768}
   m_Father: {fileID: 1555459931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8563,6 +8974,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162092612}
   m_CullTransparentMesh: 1
+--- !u!114 &1162092616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162092612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4380948c44382544dba7c49c8f4796e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageRect: {fileID: 123205768}
+  canvas: {fileID: 1555459930}
+  offset: {x: 15, y: 15}
 --- !u!1 &1163808894
 GameObject:
   m_ObjectHideFlags: 0
@@ -8672,6 +9098,18 @@ MonoBehaviour:
           m_StringArgument: Katana
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1163808897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8723,6 +9161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 50
+  bought: 0
+  need: 1
 --- !u!1 &1166301733
 GameObject:
   m_ObjectHideFlags: 0
@@ -8773,7 +9213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9257,6 +9697,18 @@ MonoBehaviour:
           m_StringArgument: Spear
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 25
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1301047429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9308,6 +9760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 25
+  bought: 0
+  need: 1
 --- !u!1 &1311614309
 GameObject:
   m_ObjectHideFlags: 0
@@ -9571,6 +10025,18 @@ MonoBehaviour:
           m_StringArgument: Trident
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 35
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1328332660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9622,6 +10088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 35
+  bought: 0
+  need: 1
 --- !u!1 &1328409487
 GameObject:
   m_ObjectHideFlags: 0
@@ -9881,6 +10349,18 @@ MonoBehaviour:
           m_StringArgument: Rapid Jab
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 150
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1369345063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9932,6 +10412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 150
+  bought: 0
+  need: 1
 --- !u!1 &1376928283
 GameObject:
   m_ObjectHideFlags: 0
@@ -10201,6 +10683,18 @@ MonoBehaviour:
           m_StringArgument: The Living Axe
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 210
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1394438936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10252,6 +10746,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 210
+  bought: 0
+  need: 1
 --- !u!1 &1401538938
 GameObject:
   m_ObjectHideFlags: 0
@@ -10440,6 +10936,18 @@ MonoBehaviour:
           m_StringArgument: War Axe
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 40
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1408638137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10491,6 +10999,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 40
+  bought: 0
+  need: 1
 --- !u!1 &1441867696
 GameObject:
   m_ObjectHideFlags: 0
@@ -10600,6 +11110,18 @@ MonoBehaviour:
           m_StringArgument: Voidbound Cleiver
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 200
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1441867699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10651,6 +11173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 200
+  bought: 0
+  need: 1
 --- !u!1 &1458491935
 GameObject:
   m_ObjectHideFlags: 0
@@ -10760,6 +11284,18 @@ MonoBehaviour:
           m_StringArgument: Death's Embrace
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1400
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1458491938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10811,6 +11347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1400
+  bought: 0
+  need: 1
 --- !u!1 &1462168182
 GameObject:
   m_ObjectHideFlags: 0
@@ -11074,6 +11612,18 @@ MonoBehaviour:
           m_StringArgument: Punch
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 75
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1470035477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11125,6 +11675,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 75
+  bought: 0
+  need: 1
 --- !u!1 &1487469987
 GameObject:
   m_ObjectHideFlags: 0
@@ -11404,6 +11956,18 @@ MonoBehaviour:
           m_StringArgument: Soul Harvester
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 175
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1494330694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11455,6 +12019,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 175
+  bought: 0
+  need: 1
 --- !u!1 &1500409660
 GameObject:
   m_ObjectHideFlags: 0
@@ -11564,6 +12130,18 @@ MonoBehaviour:
           m_StringArgument: Double - Bladed Scythe
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 200
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1500409663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11615,6 +12193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 200
+  bought: 0
+  need: 1
 --- !u!1 &1502853461
 GameObject:
   m_ObjectHideFlags: 0
@@ -11724,6 +12304,18 @@ MonoBehaviour:
           m_StringArgument: Guillotine
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 230
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1502853464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11775,6 +12367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 230
+  bought: 0
+  need: 1
 --- !u!1 &1503208379
 GameObject:
   m_ObjectHideFlags: 0
@@ -12164,7 +12758,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -12300,6 +12894,18 @@ MonoBehaviour:
           m_StringArgument: Executioner's Axe
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 85
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1561378802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12351,6 +12957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 85
+  bought: 0
+  need: 1
 --- !u!1 &1573062019
 GameObject:
   m_ObjectHideFlags: 0
@@ -12460,6 +13068,18 @@ MonoBehaviour:
           m_StringArgument: Rope
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 160
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1573062022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12511,6 +13131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 160
+  bought: 0
+  need: 1
 --- !u!1 &1602460104
 GameObject:
   m_ObjectHideFlags: 0
@@ -12850,6 +13472,18 @@ MonoBehaviour:
           m_StringArgument: Reality Fracture
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 210
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1614954148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12901,6 +13535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 210
+  bought: 0
+  need: 1
 --- !u!1 &1630837287
 GameObject:
   m_ObjectHideFlags: 0
@@ -13119,6 +13755,18 @@ MonoBehaviour:
           m_StringArgument: Echo Strike
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 175
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1680978565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13170,6 +13818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 175
+  bought: 0
+  need: 1
 --- !u!1 &1684067690
 GameObject:
   m_ObjectHideFlags: 0
@@ -13921,6 +14571,18 @@ MonoBehaviour:
           m_StringArgument: Coughing Baby
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 999
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1903431166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13972,6 +14634,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 999
+  bought: 0
+  need: 1
 --- !u!1 &1910637847
 GameObject:
   m_ObjectHideFlags: 0
@@ -14241,6 +14905,18 @@ MonoBehaviour:
           m_StringArgument: Cancer
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 250
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1916431422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14292,6 +14968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 250
+  bought: 0
+  need: 1
 --- !u!1 &1948150964
 GameObject:
   m_ObjectHideFlags: 0
@@ -14626,6 +15304,18 @@ MonoBehaviour:
           m_StringArgument: Halberd
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 90
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2002509721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14677,6 +15367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 90
+  bought: 0
+  need: 1
 --- !u!1 &2010651298
 GameObject:
   m_ObjectHideFlags: 0
@@ -14786,6 +15478,18 @@ MonoBehaviour:
           m_StringArgument: Leviathan's Pulse
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2010651301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14837,6 +15541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1100
+  bought: 0
+  need: 1
 --- !u!1 &2024425010
 GameObject:
   m_ObjectHideFlags: 0
@@ -14949,7 +15655,7 @@ MonoBehaviour:
   sceneName: 
   Weapon: Stick
   text: {fileID: 1487469989}
-  Souls: 0
+  Souls: 999
 --- !u!4 &2038827061
 Transform:
   m_ObjectHideFlags: 0
@@ -14979,6 +15685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageRect: {fileID: 1162092613}
   canvas: {fileID: 1555459930}
+  offset: {x: 15, y: 15}
 --- !u!1 &2042416299
 GameObject:
   m_ObjectHideFlags: 0
@@ -15163,6 +15870,18 @@ MonoBehaviour:
           m_StringArgument: Combo
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 750
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2050826972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15214,6 +15933,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 750
+  bought: 0
+  need: 1
 --- !u!1 &2073201256
 GameObject:
   m_ObjectHideFlags: 0
@@ -15323,6 +16044,18 @@ MonoBehaviour:
           m_StringArgument: Thousand Demon Dagger
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6666
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2073201259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15374,6 +16107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 6666
+  bought: 0
+  need: 1
 --- !u!1 &2093741545
 GameObject:
   m_ObjectHideFlags: 0
@@ -15633,6 +16368,18 @@ MonoBehaviour:
           m_StringArgument: Throwing Axe
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 75
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2127230035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15684,6 +16431,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 75
+  bought: 0
+  need: 1
 --- !u!1 &2130726355
 GameObject:
   m_ObjectHideFlags: 0
@@ -15793,6 +16542,18 @@ MonoBehaviour:
           m_StringArgument: Black Hole Singularity
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1300
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2130726358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15844,6 +16605,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1300
+  bought: 0
+  need: 1
 --- !u!1 &2131611229
 GameObject:
   m_ObjectHideFlags: 0
@@ -15953,6 +16716,18 @@ MonoBehaviour:
           m_StringArgument: Scythe
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2131611232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16004,6 +16779,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 100
+  bought: 0
+  need: 1
 --- !u!1 &2132726539
 GameObject:
   m_ObjectHideFlags: 0
@@ -16192,6 +16969,18 @@ MonoBehaviour:
           m_StringArgument: Rapier
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038827060}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 30
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2139903006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16243,6 +17032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 30
+  bought: 0
+  need: 1
 --- !u!1 &2140356322
 GameObject:
   m_ObjectHideFlags: 0

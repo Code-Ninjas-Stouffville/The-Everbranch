@@ -1,14 +1,17 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SceneSwitch : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static SceneSwitch Instance { get; private set; }
+    public static GameManager Instance { get; private set; }
 
+    [Header("Other")]
     public string sceneName = "";
     public string Weapon = "";
 
+    [Header("Souls")]
     public Text text;
     public int Souls = 0;
 
@@ -25,6 +28,7 @@ public class SceneSwitch : MonoBehaviour
             DontDestroyOnLoad(gameObject); // Optional: Persist across scenes
         }
     }
+
     private void Update()
     {
         text.text = ""+Souls;

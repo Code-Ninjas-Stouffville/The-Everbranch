@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
@@ -8,12 +8,13 @@ public class PriceUI : MonoBehaviour
 {
     public RectTransform imageRect;   // Tooltip panel
     public Canvas canvas;             // Canvas the tooltip lives on
+    public Vector2 offset = new Vector2(15f, 15f); // ← Add offset control in Inspector
 
-    private Text priceText;       // TMP text inside imageRect
+    private TMP_Text priceText;       // TMP text inside imageRect
 
     void Start()
     {
-        priceText = imageRect.GetComponentInChildren<Text>();
+        priceText = imageRect.GetComponentInChildren<TMP_Text>();
         if (priceText == null)
             Debug.LogWarning("PriceUI: No TMP_Text found in imageRect or its children!");
     }
@@ -31,25 +32,21 @@ public class PriceUI : MonoBehaviour
                 canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera,
                 out Vector2 localPoint
             );
-            imageRect.anchoredPosition = localPoint;
+
+            // Apply offset so tooltip goes slightly top-right of the cursor
+            imageRect.anchoredPosition = localPoint + offset;
         }
 
         // Hover check
         if (IsHoveringOverButton(out GameObject buttonObject))
         {
-            // Get Weapon from the hovered button (or its parent)
             var cost = buttonObject.GetComponent<Cost>() ??
-                         buttonObject.GetComponentInParent<Cost>();
+                       buttonObject.GetComponentInParent<Cost>();
 
             if (cost != null)
-            {
-                // If your field is 'cost' instead of 'Cost', change the next line accordingly.
                 priceText.text = "Cost: $" + cost.cost.ToString();
-            }
             else
-            {
                 priceText.text = "N/A";
-            }
         }
         else
         {
@@ -72,11 +69,10 @@ public class PriceUI : MonoBehaviour
 
         foreach (var result in results)
         {
-            // Use uGUI Button explicitly to avoid ambiguity with UIElements.Button
             if (result.gameObject.TryGetComponent<UnityEngine.UI.Button>(out _))
             {
-                buttonObject = result.gameObject;   // assign first
-                return true;                        // then return
+                buttonObject = result.gameObject;
+                return true;
             }
         }
 
