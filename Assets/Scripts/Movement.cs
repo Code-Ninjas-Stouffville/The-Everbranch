@@ -41,10 +41,10 @@
             // Calculate angle and   apply rotation
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             WeaponPivot.rotation = Quaternion.Euler(0f, 0f, angle);
-        if (!attackManager.isAttacking)
-        {
-            Weapon.up = direction.normalized;
-        }
+            if (!attackManager.isAttacking)
+            {
+                Weapon.up = direction.normalized;
+            }
 
         }
 

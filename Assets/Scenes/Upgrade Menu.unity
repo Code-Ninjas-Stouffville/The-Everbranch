@@ -413,7 +413,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -457,10 +457,10 @@ MonoBehaviour:
           m_StringArgument: Chainsaw
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 47734414}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -519,9 +519,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 200
+  cost: 230
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 472013783}
+  Souls: {fileID: 0}
 --- !u!1 &63741499
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +678,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72278257}
   m_CullTransparentMesh: 1
+--- !u!1 &76474296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76474297}
+  - component: {fileID: 76474300}
+  - component: {fileID: 76474299}
+  - component: {fileID: 76474298}
+  m_Layer: 0
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &76474297
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76474296}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1157745116}
+  m_Father: {fileID: 1415164766}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -86.40173, y: -24.692139}
+  m_SizeDelta: {x: 172.8035, y: 49.3842}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &76474298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76474296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4380948c44382544dba7c49c8f4796e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageRect: {fileID: 1157745116}
+  canvas: {fileID: 1555459930}
+  offset: {x: 15, y: 15}
+--- !u!114 &76474299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76474296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -6722538230516961716, guid: 694c4f482c1ca9b43b31b3bfabfd00bc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &76474300
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76474296}
+  m_CullTransparentMesh: 1
 --- !u!1 &108173501
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +914,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -864,10 +958,10 @@ MonoBehaviour:
           m_StringArgument: Salmonella
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 108336783}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -928,7 +1022,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 250
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 307823943}
+  Souls: {fileID: 0}
 --- !u!1 &118472891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,142 +1099,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118472891}
-  m_CullTransparentMesh: 1
---- !u!1 &123205767
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 123205768}
-  - component: {fileID: 123205770}
-  - component: {fileID: 123205769}
-  m_Layer: 0
-  m_Name: CostOfThing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &123205768
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123205767}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1162092613}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.6, y: 2}
-  m_SizeDelta: {x: 186.4, y: 50.350998}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &123205769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123205767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Hello
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 861c5255cc7b4a048b25b090a3c38822, type: 2}
-  m_sharedMaterial: {fileID: -8169135733661572886, guid: 861c5255cc7b4a048b25b090a3c38822, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 19.614105, y: 0, z: 26.573944, w: -13.91983}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &123205770
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123205767}
   m_CullTransparentMesh: 1
 --- !u!1 &126315115
 GameObject:
@@ -1493,7 +1453,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.6431373, g: 0.81568635, b: 0.9686275, a: 1}
     m_HighlightedColor: {r: 0.5113207, g: 0.77037954, b: 1, a: 1}
     m_PressedColor: {r: 0.41242433, g: 0.54244846, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.12664291, g: 0.41014144, b: 0.4566037, a: 1}
     m_DisabledColor: {r: 0.36890703, g: 0.51337636, b: 0.645283, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1537,10 +1497,10 @@ MonoBehaviour:
           m_StringArgument: Great Sword
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 153075005}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1601,7 +1561,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 40
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 893644751}
+  Souls: {fileID: 0}
 --- !u!1 &198656627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,7 +2223,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9921569, g: 0.5058824, b: 0.23137257, a: 1}
     m_HighlightedColor: {r: 1, g: 0.59671086, b: 0.19433957, a: 1}
     m_PressedColor: {r: 0.8867924, g: 0.3402964, b: 0.031790547, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4867924, g: 0.26747602, b: 0.13134207, a: 1}
     m_DisabledColor: {r: 0.7283019, g: 0.33600962, b: 0.11405476, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2305,10 +2267,10 @@ MonoBehaviour:
           m_StringArgument: Executioner's Will
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 254928047}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2367,9 +2329,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 1300
+  cost: 1400
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1502853461}
+  - {fileID: 1573062019}
+  - {fileID: 1394438933}
+  Souls: {fileID: 0}
 --- !u!1 &271431727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,7 +2482,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2560,10 +2526,10 @@ MonoBehaviour:
           m_StringArgument: Knockout Punch
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 283060720}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2622,9 +2588,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 175
+  cost: 200
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1470035474}
+  Souls: {fileID: 0}
 --- !u!1 &283633144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,7 +2695,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2771,10 +2739,10 @@ MonoBehaviour:
           m_StringArgument: Syringe
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 307823948}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2835,7 +2803,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 70
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 2139903003}
+  Souls: {fileID: 0}
 --- !u!1 &346918817
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,7 +3410,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.5294118, g: 0.85098046, b: 0.57254905, a: 1}
     m_HighlightedColor: {r: 0.4212004, g: 0.9547169, b: 0.40890706, a: 1}
     m_PressedColor: {r: 0.36853674, g: 0.7207546, b: 0.41578552, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.16647203, g: 0.3886792, b: 0.21026613, a: 1}
     m_DisabledColor: {r: 0.30662158, g: 0.509434, b: 0.33478996, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3484,10 +3454,10 @@ MonoBehaviour:
           m_StringArgument: Axe
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 397849854}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3548,7 +3518,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 25
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 831432752}
+  Souls: {fileID: 0}
 --- !u!1 &402392479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,7 +3665,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3737,10 +3709,10 @@ MonoBehaviour:
           m_StringArgument: Odachi
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 424014350}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3799,9 +3771,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 125
+  cost: 155
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1163808894}
+  Souls: {fileID: 0}
 --- !u!1 &432619479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4027,7 +4001,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4071,10 +4045,10 @@ MonoBehaviour:
           m_StringArgument: Hacksaw
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 472013788}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4135,7 +4109,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 80
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 724016679}
+  Souls: {fileID: 0}
 --- !u!1 &480296619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4355,7 +4331,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4399,10 +4375,10 @@ MonoBehaviour:
           m_StringArgument: Tremor Shot
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 483221621}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4463,7 +4439,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 180
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 562489923}
+  Souls: {fileID: 0}
 --- !u!1 &508507064
 GameObject:
   m_ObjectHideFlags: 0
@@ -4529,7 +4507,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.6431373, g: 0.81568635, b: 0.9686275, a: 1}
     m_HighlightedColor: {r: 0.5113207, g: 0.77037954, b: 1, a: 1}
     m_PressedColor: {r: 0.41242433, g: 0.54244846, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.12664291, g: 0.41014144, b: 0.4566037, a: 1}
     m_DisabledColor: {r: 0.36890703, g: 0.51337636, b: 0.645283, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4573,10 +4551,10 @@ MonoBehaviour:
           m_StringArgument: Glaive
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 508507069}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4637,7 +4615,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 30
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1301047426}
+  Souls: {fileID: 0}
 --- !u!1 &514239011
 GameObject:
   m_ObjectHideFlags: 0
@@ -4861,7 +4841,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4905,10 +4885,10 @@ MonoBehaviour:
           m_StringArgument: Claymore
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 546515709}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4969,7 +4949,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 110
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 153075000}
+  Souls: {fileID: 0}
 --- !u!1 &562489923
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,7 +5017,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5079,10 +5061,10 @@ MonoBehaviour:
           m_StringArgument: Pitchfork
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 562489928}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5143,7 +5125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 70
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1328332657}
+  Souls: {fileID: 0}
 --- !u!1 &567850115
 GameObject:
   m_ObjectHideFlags: 0
@@ -5209,7 +5193,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5253,10 +5237,10 @@ MonoBehaviour:
           m_StringArgument: Dart
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 567850120}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5317,7 +5301,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 175
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 2127230032}
+  Souls: {fileID: 0}
 --- !u!1 &609860333
 GameObject:
   m_ObjectHideFlags: 0
@@ -5383,7 +5369,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9921569, g: 0.5058824, b: 0.23137257, a: 1}
     m_HighlightedColor: {r: 1, g: 0.59671086, b: 0.19433957, a: 1}
     m_PressedColor: {r: 0.8867924, g: 0.3402964, b: 0.031790547, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4867924, g: 0.26747602, b: 0.13134207, a: 1}
     m_DisabledColor: {r: 0.7283019, g: 0.33600962, b: 0.11405476, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5427,10 +5413,10 @@ MonoBehaviour:
           m_StringArgument: Chainsaw Juggling
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 609860338}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5491,7 +5477,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 1200
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 567850115}
+  - {fileID: 47734409}
+  Souls: {fileID: 0}
 --- !u!1 &616017049
 GameObject:
   m_ObjectHideFlags: 0
@@ -6029,7 +6018,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.6431373, g: 0.81568635, b: 0.9686275, a: 1}
     m_HighlightedColor: {r: 0.5113207, g: 0.77037954, b: 1, a: 1}
     m_PressedColor: {r: 0.41242433, g: 0.54244846, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.12664291, g: 0.41014144, b: 0.4566037, a: 1}
     m_DisabledColor: {r: 0.36890703, g: 0.51337636, b: 0.645283, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -6073,10 +6062,10 @@ MonoBehaviour:
           m_StringArgument: Hatchet
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 724016684}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6137,7 +6126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 35
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 397849849}
+  Souls: {fileID: 0}
 --- !u!1 &746998526
 GameObject:
   m_ObjectHideFlags: 0
@@ -6423,13 +6414,13 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Stick
+          m_StringArgument: Sword
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 795777015}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6488,9 +6479,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  cost: 5
   bought: 0
-  need: 1
+  Upgrades: []
+  Souls: {fileID: 0}
 --- !u!1 &797059745
 GameObject:
   m_ObjectHideFlags: 0
@@ -6835,10 +6827,10 @@ MonoBehaviour:
           m_StringArgument: Sword
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 831432757}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6899,7 +6891,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 795777010}
+  Souls: {fileID: 0}
 --- !u!1 &872863044
 GameObject:
   m_ObjectHideFlags: 0
@@ -7009,10 +7003,10 @@ MonoBehaviour:
           m_StringArgument: Broken Blade
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 872863049}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7073,7 +7067,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 424014345}
+  Souls: {fileID: 0}
 --- !u!1 &881685765
 GameObject:
   m_ObjectHideFlags: 0
@@ -7289,7 +7285,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.5294118, g: 0.85098046, b: 0.57254905, a: 1}
     m_HighlightedColor: {r: 0.4212004, g: 0.9547169, b: 0.40890706, a: 1}
     m_PressedColor: {r: 0.36853674, g: 0.7207546, b: 0.41578552, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.16647203, g: 0.3886792, b: 0.21026613, a: 1}
     m_DisabledColor: {r: 0.30662158, g: 0.509434, b: 0.33478996, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -7333,10 +7329,10 @@ MonoBehaviour:
           m_StringArgument: Long Sword
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 893644756}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7397,7 +7393,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 30
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 831432752}
+  Souls: {fileID: 0}
 --- !u!1 &922364295
 GameObject:
   m_ObjectHideFlags: 0
@@ -7542,7 +7540,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -7586,10 +7584,10 @@ MonoBehaviour:
           m_StringArgument: Poseidon
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 938503496}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7648,9 +7646,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 180
+  cost: 200
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 964009331}
+  Souls: {fileID: 0}
 --- !u!1 &945175893
 GameObject:
   m_ObjectHideFlags: 0
@@ -7945,7 +7945,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -7989,10 +7989,10 @@ MonoBehaviour:
           m_StringArgument: Loyalty
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 964009336}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8053,7 +8053,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 80
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1328332657}
+  Souls: {fileID: 0}
 --- !u!1 &991035083
 GameObject:
   m_ObjectHideFlags: 0
@@ -8897,6 +8899,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150644347}
   m_CullTransparentMesh: 1
+--- !u!1 &1157745115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1157745116}
+  - component: {fileID: 1157745118}
+  - component: {fileID: 1157745117}
+  m_Layer: 0
+  m_Name: CostOfThing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1157745116
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157745115}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 76474297}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.6, y: 2}
+  m_SizeDelta: {x: 186.4, y: 50.350998}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1157745117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157745115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Hello
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 861c5255cc7b4a048b25b090a3c38822, type: 2}
+  m_sharedMaterial: {fileID: -8169135733661572886, guid: 861c5255cc7b4a048b25b090a3c38822, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 19.614105, y: 0, z: 26.573944, w: -13.91983}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1157745118
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157745115}
+  m_CullTransparentMesh: 1
 --- !u!1 &1162092612
 GameObject:
   m_ObjectHideFlags: 0
@@ -8907,8 +9045,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1162092613}
   - component: {fileID: 1162092615}
-  - component: {fileID: 1162092614}
-  - component: {fileID: 1162092616}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -8928,7 +9064,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 123205768}
+  - {fileID: 1415164766}
   m_Father: {fileID: 1555459931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8936,36 +9072,6 @@ RectTransform:
   m_AnchoredPosition: {x: -276.44183, y: 132.34802}
   m_SizeDelta: {x: 172.8035, y: 49.3842}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1162092614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162092612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -6722538230516961716, guid: 694c4f482c1ca9b43b31b3bfabfd00bc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1162092615
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8974,21 +9080,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162092612}
   m_CullTransparentMesh: 1
---- !u!114 &1162092616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162092612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4380948c44382544dba7c49c8f4796e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imageRect: {fileID: 123205768}
-  canvas: {fileID: 1555459930}
-  offset: {x: 15, y: 15}
 --- !u!1 &1163808894
 GameObject:
   m_ObjectHideFlags: 0
@@ -9054,7 +9145,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.6431373, g: 0.81568635, b: 0.9686275, a: 1}
     m_HighlightedColor: {r: 0.5113207, g: 0.77037954, b: 1, a: 1}
     m_PressedColor: {r: 0.41242433, g: 0.54244846, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.12664291, g: 0.41014144, b: 0.4566037, a: 1}
     m_DisabledColor: {r: 0.36890703, g: 0.51337636, b: 0.645283, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -9098,10 +9189,10 @@ MonoBehaviour:
           m_StringArgument: Katana
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1163808899}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9162,7 +9253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 50
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 893644751}
+  Souls: {fileID: 0}
 --- !u!1 &1166301733
 GameObject:
   m_ObjectHideFlags: 0
@@ -9653,7 +9746,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.5294118, g: 0.85098046, b: 0.57254905, a: 1}
     m_HighlightedColor: {r: 0.4212004, g: 0.9547169, b: 0.40890706, a: 1}
     m_PressedColor: {r: 0.36853674, g: 0.7207546, b: 0.41578552, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.16647203, g: 0.3886792, b: 0.21026613, a: 1}
     m_DisabledColor: {r: 0.30662158, g: 0.509434, b: 0.33478996, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -9697,10 +9790,10 @@ MonoBehaviour:
           m_StringArgument: Spear
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1301047431}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9761,7 +9854,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 25
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 831432752}
+  Souls: {fileID: 0}
 --- !u!1 &1311614309
 GameObject:
   m_ObjectHideFlags: 0
@@ -9981,7 +10076,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.6431373, g: 0.81568635, b: 0.9686275, a: 1}
     m_HighlightedColor: {r: 0.5113207, g: 0.77037954, b: 1, a: 1}
     m_PressedColor: {r: 0.41242433, g: 0.54244846, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.12664291, g: 0.41014144, b: 0.4566037, a: 1}
     m_DisabledColor: {r: 0.36890703, g: 0.51337636, b: 0.645283, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10025,10 +10120,10 @@ MonoBehaviour:
           m_StringArgument: Trident
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1328332662}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10089,7 +10184,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 35
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1301047426}
+  Souls: {fileID: 0}
 --- !u!1 &1328409487
 GameObject:
   m_ObjectHideFlags: 0
@@ -10305,7 +10402,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10349,10 +10446,10 @@ MonoBehaviour:
           m_StringArgument: Rapid Jab
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1369345065}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10413,7 +10510,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 150
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1470035474}
+  Souls: {fileID: 0}
 --- !u!1 &1376928283
 GameObject:
   m_ObjectHideFlags: 0
@@ -10639,7 +10738,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10683,10 +10782,10 @@ MonoBehaviour:
           m_StringArgument: The Living Axe
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1394438938}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10747,7 +10846,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 210
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 2002509718}
+  Souls: {fileID: 0}
 --- !u!1 &1401538938
 GameObject:
   m_ObjectHideFlags: 0
@@ -10892,7 +10993,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.6431373, g: 0.81568635, b: 0.9686275, a: 1}
     m_HighlightedColor: {r: 0.5113207, g: 0.77037954, b: 1, a: 1}
     m_PressedColor: {r: 0.41242433, g: 0.54244846, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.12664291, g: 0.41014144, b: 0.4566037, a: 1}
     m_DisabledColor: {r: 0.36890703, g: 0.51337636, b: 0.645283, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10936,10 +11037,10 @@ MonoBehaviour:
           m_StringArgument: War Axe
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1408638139}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10998,9 +11099,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 40
+  cost: 50
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 397849849}
+  Souls: {fileID: 0}
+--- !u!1 &1415164765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1415164766}
+  m_Layer: 0
+  m_Name: Price Box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1415164766
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415164765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 76474297}
+  m_Father: {fileID: 1162092613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1441867696
 GameObject:
   m_ObjectHideFlags: 0
@@ -11066,7 +11205,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -11110,10 +11249,10 @@ MonoBehaviour:
           m_StringArgument: Voidbound Cleiver
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1441867701}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11172,9 +11311,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 200
+  cost: 220
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 546515704}
+  Souls: {fileID: 0}
 --- !u!1 &1458491935
 GameObject:
   m_ObjectHideFlags: 0
@@ -11240,7 +11381,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9921569, g: 0.5058824, b: 0.23137257, a: 1}
     m_HighlightedColor: {r: 1, g: 0.59671086, b: 0.19433957, a: 1}
     m_PressedColor: {r: 0.8867924, g: 0.3402964, b: 0.031790547, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4867924, g: 0.26747602, b: 0.13134207, a: 1}
     m_DisabledColor: {r: 0.7283019, g: 0.33600962, b: 0.11405476, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -11284,10 +11425,10 @@ MonoBehaviour:
           m_StringArgument: Death's Embrace
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1458491940}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11346,9 +11487,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 1400
+  cost: 1500
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1500409660}
+  - {fileID: 1494330691}
+  Souls: {fileID: 0}
 --- !u!1 &1462168182
 GameObject:
   m_ObjectHideFlags: 0
@@ -11568,7 +11712,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -11612,10 +11756,10 @@ MonoBehaviour:
           m_StringArgument: Punch
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1470035479}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11676,7 +11820,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 75
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 508507064}
+  Souls: {fileID: 0}
 --- !u!1 &1487469987
 GameObject:
   m_ObjectHideFlags: 0
@@ -11912,7 +12058,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -11956,10 +12102,10 @@ MonoBehaviour:
           m_StringArgument: Soul Harvester
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1494330696}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12018,9 +12164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 175
+  cost: 200
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 2131611229}
+  Souls: {fileID: 0}
 --- !u!1 &1500409660
 GameObject:
   m_ObjectHideFlags: 0
@@ -12086,7 +12234,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -12130,10 +12278,10 @@ MonoBehaviour:
           m_StringArgument: Double - Bladed Scythe
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1500409665}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12192,9 +12340,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 200
+  cost: 250
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 2131611229}
+  Souls: {fileID: 0}
 --- !u!1 &1502853461
 GameObject:
   m_ObjectHideFlags: 0
@@ -12260,7 +12410,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -12304,10 +12454,10 @@ MonoBehaviour:
           m_StringArgument: Guillotine
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1502853466}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12366,9 +12516,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 230
+  cost: 250
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1561378799}
+  Souls: {fileID: 0}
 --- !u!1 &1503208379
 GameObject:
   m_ObjectHideFlags: 0
@@ -12850,7 +13002,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -12894,10 +13046,10 @@ MonoBehaviour:
           m_StringArgument: Executioner's Axe
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1561378804}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12958,7 +13110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 85
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1408638134}
+  Souls: {fileID: 0}
 --- !u!1 &1573062019
 GameObject:
   m_ObjectHideFlags: 0
@@ -13024,7 +13178,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -13068,10 +13222,10 @@ MonoBehaviour:
           m_StringArgument: Rope
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1573062024}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13132,7 +13286,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 160
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1561378799}
+  Souls: {fileID: 0}
 --- !u!1 &1602460104
 GameObject:
   m_ObjectHideFlags: 0
@@ -13428,7 +13584,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -13472,10 +13628,10 @@ MonoBehaviour:
           m_StringArgument: Reality Fracture
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1614954150}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13536,7 +13692,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 210
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 546515704}
+  Souls: {fileID: 0}
 --- !u!1 &1630837287
 GameObject:
   m_ObjectHideFlags: 0
@@ -13711,7 +13869,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -13755,10 +13913,10 @@ MonoBehaviour:
           m_StringArgument: Echo Strike
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1680978567}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13819,7 +13977,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 175
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 562489923}
+  Souls: {fileID: 0}
 --- !u!1 &1684067690
 GameObject:
   m_ObjectHideFlags: 0
@@ -14527,7 +14687,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9921569, g: 0.5058824, b: 0.23137257, a: 1}
     m_HighlightedColor: {r: 1, g: 0.59671086, b: 0.19433957, a: 1}
     m_PressedColor: {r: 0.8867924, g: 0.3402964, b: 0.031790547, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4867924, g: 0.26747602, b: 0.13134207, a: 1}
     m_DisabledColor: {r: 0.7283019, g: 0.33600962, b: 0.11405476, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -14571,10 +14731,10 @@ MonoBehaviour:
           m_StringArgument: Coughing Baby
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1903431168}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14635,7 +14795,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 999
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 108336778}
+  - {fileID: 1916431419}
+  Souls: {fileID: 0}
 --- !u!1 &1910637847
 GameObject:
   m_ObjectHideFlags: 0
@@ -14861,7 +15024,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9960785, g: 0.9450981, b: 0.40000004, a: 1}
     m_HighlightedColor: {r: 0.98144513, g: 0.98490566, b: 0.25087208, a: 1}
     m_PressedColor: {r: 0.8862746, g: 0.8196079, b: 0.098039225, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4188679, g: 0.41859207, b: 0.157273, a: 1}
     m_DisabledColor: {r: 0.5773585, g: 0.54950106, b: 0.25164112, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -14905,10 +15068,10 @@ MonoBehaviour:
           m_StringArgument: Cancer
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1916431424}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14969,7 +15132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 250
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 307823943}
+  Souls: {fileID: 0}
 --- !u!1 &1948150964
 GameObject:
   m_ObjectHideFlags: 0
@@ -15260,7 +15425,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -15304,10 +15469,10 @@ MonoBehaviour:
           m_StringArgument: Halberd
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2002509723}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15368,7 +15533,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 90
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1408638134}
+  Souls: {fileID: 0}
 --- !u!1 &2010651298
 GameObject:
   m_ObjectHideFlags: 0
@@ -15434,7 +15601,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9921569, g: 0.5058824, b: 0.23137257, a: 1}
     m_HighlightedColor: {r: 1, g: 0.59671086, b: 0.19433957, a: 1}
     m_PressedColor: {r: 0.8867924, g: 0.3402964, b: 0.031790547, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4867924, g: 0.26747602, b: 0.13134207, a: 1}
     m_DisabledColor: {r: 0.7283019, g: 0.33600962, b: 0.11405476, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -15478,10 +15645,10 @@ MonoBehaviour:
           m_StringArgument: Leviathan's Pulse
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2010651303}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15540,9 +15707,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 1100
+  cost: 1300
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 483221616}
+  - {fileID: 1680978562}
+  - {fileID: 938503491}
+  Souls: {fileID: 0}
 --- !u!1 &2024425010
 GameObject:
   m_ObjectHideFlags: 0
@@ -15655,7 +15826,7 @@ MonoBehaviour:
   sceneName: 
   Weapon: Stick
   text: {fileID: 1487469989}
-  Souls: 999
+  Souls: 20000
 --- !u!4 &2038827061
 Transform:
   m_ObjectHideFlags: 0
@@ -15826,7 +15997,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9921569, g: 0.5058824, b: 0.23137257, a: 1}
     m_HighlightedColor: {r: 1, g: 0.59671086, b: 0.19433957, a: 1}
     m_PressedColor: {r: 0.8867924, g: 0.3402964, b: 0.031790547, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4867924, g: 0.26747602, b: 0.13134207, a: 1}
     m_DisabledColor: {r: 0.7283019, g: 0.33600962, b: 0.11405476, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -15870,10 +16041,10 @@ MonoBehaviour:
           m_StringArgument: Combo
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2050826974}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15934,7 +16105,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 750
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 283060715}
+  - {fileID: 1369345060}
+  Souls: {fileID: 0}
 --- !u!1 &2073201256
 GameObject:
   m_ObjectHideFlags: 0
@@ -16044,10 +16218,10 @@ MonoBehaviour:
           m_StringArgument: Thousand Demon Dagger
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2073201261}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16108,7 +16282,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 6666
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 872863044}
+  Souls: {fileID: 0}
 --- !u!1 &2093741545
 GameObject:
   m_ObjectHideFlags: 0
@@ -16324,7 +16500,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -16368,10 +16544,10 @@ MonoBehaviour:
           m_StringArgument: Throwing Axe
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2127230037}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16432,7 +16608,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 75
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 724016679}
+  Souls: {fileID: 0}
 --- !u!1 &2130726355
 GameObject:
   m_ObjectHideFlags: 0
@@ -16498,7 +16676,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9921569, g: 0.5058824, b: 0.23137257, a: 1}
     m_HighlightedColor: {r: 1, g: 0.59671086, b: 0.19433957, a: 1}
     m_PressedColor: {r: 0.8867924, g: 0.3402964, b: 0.031790547, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.4867924, g: 0.26747602, b: 0.13134207, a: 1}
     m_DisabledColor: {r: 0.7283019, g: 0.33600962, b: 0.11405476, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -16542,10 +16720,10 @@ MonoBehaviour:
           m_StringArgument: Black Hole Singularity
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2130726360}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16604,9 +16782,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 1300
+  cost: 1500
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 1441867696}
+  - {fileID: 1614954145}
+  Souls: {fileID: 0}
 --- !u!1 &2131611229
 GameObject:
   m_ObjectHideFlags: 0
@@ -16672,7 +16853,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.74509805, g: 0.47058827, b: 0.909804, a: 1}
     m_HighlightedColor: {r: 0.8148869, g: 0.5818369, b: 0.9547169, a: 1}
     m_PressedColor: {r: 0.535082, g: 0.32769668, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.34372735, g: 0.11660372, b: 0.3886792, a: 1}
     m_DisabledColor: {r: 0.5922427, g: 0.39029542, b: 0.7207546, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -16716,10 +16897,10 @@ MonoBehaviour:
           m_StringArgument: Scythe
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2131611234}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16778,9 +16959,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 100
+  cost: 120
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 508507064}
+  Souls: {fileID: 0}
 --- !u!1 &2132726539
 GameObject:
   m_ObjectHideFlags: 0
@@ -16925,7 +17108,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.6431373, g: 0.81568635, b: 0.9686275, a: 1}
     m_HighlightedColor: {r: 0.5113207, g: 0.77037954, b: 1, a: 1}
     m_PressedColor: {r: 0.41242433, g: 0.54244846, b: 0.6603774, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.12664291, g: 0.41014144, b: 0.4566037, a: 1}
     m_DisabledColor: {r: 0.36890703, g: 0.51337636, b: 0.645283, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -16969,10 +17152,10 @@ MonoBehaviour:
           m_StringArgument: Rapier
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2038827060}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2139903008}
+        m_TargetAssemblyTypeName: Cost, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17031,9 +17214,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78375ce4ca2aa124e9b16666da250414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 30
+  cost: 20
   bought: 0
-  need: 1
+  Upgrades:
+  - {fileID: 893644751}
+  Souls: {fileID: 0}
 --- !u!1 &2140356322
 GameObject:
   m_ObjectHideFlags: 0

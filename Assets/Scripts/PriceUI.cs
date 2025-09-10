@@ -40,16 +40,20 @@ public class PriceUI : MonoBehaviour
         // Hover check
         if (IsHoveringOverButton(out GameObject buttonObject))
         {
+            imageRect.gameObject.SetActive(true);
             var cost = buttonObject.GetComponent<Cost>() ??
                        buttonObject.GetComponentInParent<Cost>();
 
-            if (cost != null)
+            if (cost.bought == true)
+                priceText.text = "Bought!";
+            else if (cost != null)
                 priceText.text = "Cost: $" + cost.cost.ToString();
             else
                 priceText.text = "N/A";
         }
         else
         {
+            imageRect.gameObject.SetActive(false);
             priceText.text = "";
         }
     }
