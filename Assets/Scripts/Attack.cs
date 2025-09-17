@@ -35,7 +35,7 @@ public class Attack : MonoBehaviour
         direction.z = 0f;
         float distanceToMouse = direction.magnitude;
 
-        // Clamp to weapon range (use float, not int!)
+        // Clamp to weapon range
         float maxReach = (float)weaponStats.currentWeapon.range;
         float targetReach = Mathf.Min(distanceToMouse, maxReach);
 
@@ -50,7 +50,6 @@ public class Attack : MonoBehaviour
 
         if (isAttacking)
         {
-
             if (weaponStats.currentWeapon.type == WeaponType.Melee)
             {
                 // Spin the weapon
@@ -60,7 +59,6 @@ public class Attack : MonoBehaviour
                 attackTimer += Time.deltaTime;
 
                 // Extend along the pivot's local +X toward the cursor distance (clamped)
-                // Keep Y/Z from the original local position
                 Vector3 targetLocal = originalLocalPosition + Vector3.right * targetReach;
                 transform.localPosition = Vector3.Lerp(transform.localPosition, targetLocal, Time.deltaTime * pushOutSpeed);
 
@@ -69,27 +67,49 @@ public class Attack : MonoBehaviour
                 {
                     isAttacking = false;
                 }
-            } 
-            else
+            }
+            else // Ranged weapon
             {
-                GameObject bullet = Instantiate(weaponStats.currentWeapon.bullet, transform.position, Quaternion.identity);
+                GameObject bullet = Instantiate(
+                    weaponStats.currentWeapon.bullet,
+                    transform.position,
+                    Quaternion.identity
+                );
 
                 float spread = weaponStats.currentWeapon.spread;
-                Vector3 randSpread = direction.normalized + new Vector3(Random.Range(-spread * 0.1f, spread * 0.1f), Random.Range(-spread * 0.1f, spread * 0.1f),0);
+                Vector3 randSpread = direction.normalized +
+                    new Vector3(Random.Range(-spread * 0.1f, spread * 0.1f),
+                                Random.Range(-spread * 0.1f, spread * 0.1f),
+                                0);
 
-                bullet.GetComponent<Rigidbody2D>().linearVelocity = randSpread * weaponStats.currentWeapon.projectSpeed;
+                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.linearVelocity = randSpread * weaponStats.currentWeapon.projectSpeed;
+                }
+
+                // 👇 destroy bullet after projectLife seconds
+                if (weaponStats.currentWeapon.projectLife > 0)
+                {
+                    Destroy(bullet, weaponStats.currentWeapon.projectLife);
+                }
+
                 isAttacking = false;
             }
-            
         }
         else
         {
             // Retract & reset
-            transform.localPosition = Vector3.Lerp(transform.localPosition, originalLocalPosition, Time.deltaTime * retractSpeed);
-            transform.localRotation = originalLocalRotation; // use local rotation (matches what we stored)
+            transform.localPosition = Vector3.Lerp(
+                transform.localPosition,
+                originalLocalPosition,
+                Time.deltaTime * retractSpeed
+            );
+            transform.localRotation = originalLocalRotation;
         }
 
         // Cooldown
-        if (cooldown > 0f) cooldown -= Time.deltaTime;
+        if (cooldown > 0f)
+            cooldown -= Time.deltaTime;
     }
 }
