@@ -14,7 +14,6 @@ public class Attack : MonoBehaviour
 
     public Transform weaponPivot;
 
-    // Speeds (tweak in Inspector)
     public float pushOutSpeed = 25f;
     public float retractSpeed = 25f;
 
@@ -26,20 +25,16 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-        // Mouse world pos (2D)
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPosition.z = 0f;
 
-        // Direction & distance from pivot to mouse (2D)
         Vector3 direction = mouseWorldPosition - weaponPivot.position;
         direction.z = 0f;
         float distanceToMouse = direction.magnitude;
 
-        // Clamp to weapon range
         float maxReach = (float)weaponStats.currentWeapon.range;
         float targetReach = Mathf.Min(distanceToMouse, maxReach);
 
-        // Start attack once per key press
         if (Input.GetKey(KeyCode.Space) && cooldown <= 0f)
         {
             cooldown = weaponStats.currentWeapon.attackSpeed;
@@ -52,17 +47,14 @@ public class Attack : MonoBehaviour
         {
             if (weaponStats.currentWeapon.type == WeaponType.Melee)
             {
-                // Spin the weapon
                 float rotationStep = weaponStats.currentWeapon.spinSpeed * 360f * Time.deltaTime;
                 transform.Rotate(0f, 0f, rotationStep);
                 rotationAccumulated += rotationStep;
                 attackTimer += Time.deltaTime;
 
-                // Extend along the pivot's local +X toward the cursor distance (clamped)
                 Vector3 targetLocal = originalLocalPosition + Vector3.right * targetReach;
                 transform.localPosition = Vector3.Lerp(transform.localPosition, targetLocal, Time.deltaTime * pushOutSpeed);
 
-                // End after one spin or a small time window
                 if (rotationAccumulated >= 360f || attackTimer >= 0.5f)
                 {
                     isAttacking = false;
@@ -76,6 +68,10 @@ public class Attack : MonoBehaviour
                     Quaternion.identity
                 );
 
+                // Add spin behavior to projectile
+                BulletSpin spin = bullet.AddComponent<BulletSpin>();
+                spin.spinSpeed = weaponStats.currentWeapon.spinSpeed;
+
                 float spread = weaponStats.currentWeapon.spread;
                 Vector3 randSpread = direction.normalized +
                     new Vector3(Random.Range(-spread * 0.1f, spread * 0.1f),
@@ -88,7 +84,6 @@ public class Attack : MonoBehaviour
                     rb.linearVelocity = randSpread * weaponStats.currentWeapon.projectSpeed;
                 }
 
-                // 👇 destroy bullet after projectLife seconds
                 if (weaponStats.currentWeapon.projectLife > 0)
                 {
                     Destroy(bullet, weaponStats.currentWeapon.projectLife);
@@ -99,7 +94,6 @@ public class Attack : MonoBehaviour
         }
         else
         {
-            // Retract & reset
             transform.localPosition = Vector3.Lerp(
                 transform.localPosition,
                 originalLocalPosition,
@@ -108,7 +102,6 @@ public class Attack : MonoBehaviour
             transform.localRotation = originalLocalRotation;
         }
 
-        // Cooldown
         if (cooldown > 0f)
             cooldown -= Time.deltaTime;
     }

@@ -395,7 +395,7 @@ MonoBehaviour:
     pierce: 1
     projectSpeed: 15
     projectLife: 2
-    bullet: {fileID: 3719869906297901345, guid: 170c9d298bd89c542b0b81db926c143b, type: 3}
+    bullet: {fileID: 3719869906297901345, guid: d6ad2dd5e4ba820428df9e43d4f76e7d, type: 3}
   - name: HackSaw
     type: 0
     damage: 50
@@ -512,7 +512,7 @@ MonoBehaviour:
     pierce: 2
     projectSpeed: 15
     projectLife: 3
-    bullet: {fileID: 3719869906297901345, guid: 170c9d298bd89c542b0b81db926c143b, type: 3}
+    bullet: {fileID: 3719869906297901345, guid: a3106cecf026767429095c931406cf50, type: 3}
   - name: Poseidon
     type: 1
     damage: 100
@@ -525,7 +525,7 @@ MonoBehaviour:
     pierce: 3
     projectSpeed: 15
     projectLife: 3
-    bullet: {fileID: 3719869906297901345, guid: 170c9d298bd89c542b0b81db926c143b, type: 3}
+    bullet: {fileID: 3719869906297901345, guid: 1435db9a06fc5824d9989acb50343574, type: 3}
   - name: Voidbound Cleiver
     type: 0
     damage: 10
@@ -558,7 +558,7 @@ MonoBehaviour:
     attackSpeed: 1
     knockback: 0
     DoT: 10
-    spinSpeed: 0
+    spinSpeed: 1
     range: 0
     spread: 0
     pierce: 0
@@ -571,13 +571,13 @@ MonoBehaviour:
     attackSpeed: 1
     knockback: 0
     DoT: 5
-    spinSpeed: 1
+    spinSpeed: -1
     range: 0
     spread: 0
     pierce: 1
     projectSpeed: 10
     projectLife: 3
-    bullet: {fileID: 3719869906297901345, guid: 170c9d298bd89c542b0b81db926c143b, type: 3}
+    bullet: {fileID: 3719869906297901345, guid: 02cd301e44589ad4f9f47513a6c38f6c, type: 3}
   - name: Dart
     type: 1
     damage: 25
@@ -590,20 +590,20 @@ MonoBehaviour:
     pierce: 1
     projectSpeed: 10
     projectLife: 2
-    bullet: {fileID: 3719869906297901345, guid: 170c9d298bd89c542b0b81db926c143b, type: 3}
+    bullet: {fileID: 3719869906297901345, guid: e8bb6ea258d2215418bcb4d85d434db9, type: 3}
   - name: Chainsaw
     type: 1
     damage: 25
     attackSpeed: 0
     knockback: 0
     DoT: 0
-    spinSpeed: 0
+    spinSpeed: -1
     range: 1
     spread: 0
     pierce: 0
     projectSpeed: 0
     projectLife: 0
-    bullet: {fileID: 0}
+    bullet: {fileID: 3719869906297901345, guid: c757779a3854fca498c4df85d7000540, type: 3}
   - name: Rope
     type: 0
     damage: 25
@@ -668,20 +668,20 @@ MonoBehaviour:
     pierce: 5
     projectSpeed: 0
     projectLife: 0
-    bullet: {fileID: 3719869906297901345, guid: 170c9d298bd89c542b0b81db926c143b, type: 3}
+    bullet: {fileID: 3719869906297901345, guid: 0955a77c490ca724291d465b38bb28fc, type: 3}
   - name: Black Hole Singularity
     type: 1
     damage: 150
     attackSpeed: 10
     knockback: -5
     DoT: 25
-    spinSpeed: 0
+    spinSpeed: -0.1
     range: 0
     spread: 0
     pierce: 9999
     projectSpeed: 10
     projectLife: 5
-    bullet: {fileID: 0}
+    bullet: {fileID: 3719869906297901345, guid: ceadad82b17147a429804650cc574d1e, type: 3}
   - name: Thousand Demon Dagger
     type: 0
     damage: 500
@@ -701,20 +701,20 @@ MonoBehaviour:
     attackSpeed: 0.1
     knockback: 1
     DoT: 100
-    spinSpeed: 10
+    spinSpeed: -3
     range: 0
     spread: 0
     pierce: 10
     projectSpeed: 100
     projectLife: 1
-    bullet: {fileID: 3719869906297901345, guid: 170c9d298bd89c542b0b81db926c143b, type: 3}
+    bullet: {fileID: 3719869906297901345, guid: e0069925e6731cf479dc393077d8d0fb, type: 3}
   - name: Chainsaw Juggling
     type: 1
     damage: 25
     attackSpeed: 0.3
     knockback: 1
     DoT: 25
-    spinSpeed: 0
+    spinSpeed: -1
     range: 0
     spread: 25
     pierce: 3
@@ -738,16 +738,16 @@ MonoBehaviour:
     name: 
     type: 1
     damage: 25
-    attackSpeed: 0
+    attackSpeed: 0.5
     knockback: 0
     DoT: 0
-    spinSpeed: 0
+    spinSpeed: -0.1
     range: 1
     spread: 1
     pierce: 0
     projectSpeed: 10
-    projectLife: 0
-    bullet: {fileID: 3719869906297901345, guid: 170c9d298bd89c542b0b81db926c143b, type: 3}
+    projectLife: 1
+    bullet: {fileID: 3719869906297901345, guid: ceadad82b17147a429804650cc574d1e, type: 3}
 --- !u!4 &24757400
 Transform:
   m_ObjectHideFlags: 0
@@ -844,7 +844,7 @@ Transform:
   m_GameObject: {fileID: 35419172}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.32, y: 1.83, z: -1}
+  m_LocalPosition: {x: 0.72, y: 0.82, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1008,12 +1008,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.1496689, g: 0.5396226, b: 0.18377864, a: 1}
+  m_Sprite: {fileID: 2685070207061647291, guid: fbae5f0641448f247ba71579be5f6d79, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 40.96, y: 40.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1029,7 +1029,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 120, y: 100, z: 1}
+  m_LocalScale: {x: 3, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1095,8 +1095,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.17941613, g: 0.4264151, b: 0.20164603, a: 1}
+  m_Sprite: {fileID: -4287958358583218502, guid: 0a72a30405a0dde4fb395180a4bcf32d, type: 3}
+  m_Color: {r: 0.020137727, g: 0.7509433, b: 0.004250561, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1116,7 +1116,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 150, y: 125, z: 1}
+  m_LocalScale: {x: 4.6, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

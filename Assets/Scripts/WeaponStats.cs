@@ -8,7 +8,7 @@ public class Weapon {
     public float attackSpeed = 2f;
     public int knockback = 1;
     public int DoT = 0;
-    public int spinSpeed = 360;
+    public float spinSpeed = 0;
     [Header("Use for Melee Weapon")]
     public int range = 1;
     [Header("Use for Range Weapon")]
