@@ -156,6 +156,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 3
+    Thing: {fileID: 2168015242566886318, guid: b4ae12c52bbec2140aceb0d0fa9764ac, type: 3}
     range: 1
     spread: 0
     pierce: 0
@@ -169,6 +170,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 3
+    Thing: {fileID: 2168015242566886318, guid: 30c506fd1a9fdf145a6248fb662d490b, type: 3}
     range: 1
     spread: 0
     pierce: 0
@@ -182,6 +184,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 2168015242566886318, guid: 553cfe42e3c1155478a45466f6d52d28, type: 3}
     range: 3
     spread: 0
     pierce: 0
@@ -195,6 +198,7 @@ MonoBehaviour:
     knockback: 2
     DoT: 0
     spinSpeed: 3
+    Thing: {fileID: 2168015242566886318, guid: bb2b0e9a7d31911489b26469b34ba981, type: 3}
     range: 2
     spread: 0
     pierce: 0
@@ -208,6 +212,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 3
+    Thing: {fileID: 2168015242566886318, guid: e8bb8f1861f4c0c4cbb1db0abef6c45c, type: 3}
     range: 2
     spread: 0
     pierce: 0
@@ -221,6 +226,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 2168015242566886318, guid: 51fd469995bebab4c8755c8457c14bae, type: 3}
     range: 4
     spread: 0
     pierce: 0
@@ -234,6 +240,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 2168015242566886318, guid: 91d06bce9f9f71844a759a17de8a8138, type: 3}
     range: 0
     spread: 0
     pierce: 2
@@ -247,6 +254,7 @@ MonoBehaviour:
     knockback: 3
     DoT: 0
     spinSpeed: 2
+    Thing: {fileID: 2168015242566886318, guid: 5e73de06ddc571647ab1d39e33e785b4, type: 3}
     range: 2
     spread: 0
     pierce: 0
@@ -260,6 +268,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 5
+    Thing: {fileID: 2168015242566886318, guid: 5061679183b1ae045a1109fb8bb7f23f, type: 3}
     range: 1
     spread: 0
     pierce: 0
@@ -273,6 +282,7 @@ MonoBehaviour:
     knockback: 2
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 1
     spread: 0
     pierce: 0
@@ -286,6 +296,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 3
+    Thing: {fileID: 2168015242566886318, guid: 25dbb01223285e843a5f3ce0521efd76, type: 3}
     range: 5
     spread: 0
     pierce: 0
@@ -299,6 +310,7 @@ MonoBehaviour:
     knockback: 3
     DoT: 0
     spinSpeed: 1
+    Thing: {fileID: 2168015242566886318, guid: f2ee2d3e512fe4843a5c440b0b4f6c84, type: 3}
     range: 1
     spread: 0
     pierce: 0
@@ -312,6 +324,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 2
     spinSpeed: 3
+    Thing: {fileID: 2168015242566886318, guid: 66b604842a41a7c44aacb378b31d453e, type: 3}
     range: 3
     spread: 0
     pierce: 0
@@ -325,6 +338,7 @@ MonoBehaviour:
     knockback: 3
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 2168015242566886318, guid: 1616c218df722184a8976c121007dcd3, type: 3}
     range: 2
     spread: 0
     pierce: 0
@@ -338,12 +352,27 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 2168015242566886318, guid: b91e9eed986b8bf4eb32b97f16b9a9a8, type: 3}
     range: 0
     spread: 0
     pierce: 2
     projectSpeed: 10
     projectLife: 3
     bullet: {fileID: 3719869906297901345, guid: 170c9d298bd89c542b0b81db926c143b, type: 3}
+  - name: Loyalty
+    type: 1
+    damage: 50
+    attackSpeed: 1
+    knockback: -3
+    DoT: 0
+    spinSpeed: 0
+    Thing: {fileID: 2168015242566886318, guid: 655d71f8357fea0459d1ec95348a3386, type: 3}
+    range: 0
+    spread: 0
+    pierce: 10
+    projectSpeed: 1
+    projectLife: 3
+    bullet: {fileID: 3719869906297901345, guid: 9c02843e0fe83e24a83437fb333065b7, type: 3}
   - name: Claymore
     type: 0
     damage: 150
@@ -351,6 +380,7 @@ MonoBehaviour:
     knockback: 5
     DoT: 0
     spinSpeed: 1
+    Thing: {fileID: 0}
     range: 2
     spread: 0
     pierce: 0
@@ -364,6 +394,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 7
+    Thing: {fileID: 0}
     range: 2
     spread: 0
     pierce: 0
@@ -377,6 +408,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 1
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 1
     spread: 0
     pierce: 0
@@ -390,6 +422,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 10
+    Thing: {fileID: 0}
     range: 0
     spread: 2
     pierce: 1
@@ -403,6 +436,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 3
     spread: 0
     pierce: 0
@@ -416,6 +450,7 @@ MonoBehaviour:
     knockback: 4
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 0
     spread: 0
     pierce: 0
@@ -429,6 +464,7 @@ MonoBehaviour:
     knockback: 2
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 3
     spread: 0
     pierce: 0
@@ -442,6 +478,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 5
+    Thing: {fileID: 0}
     range: 0
     spread: 0
     pierce: 0
@@ -455,6 +492,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 5
     spinSpeed: 1
+    Thing: {fileID: 0}
     range: 4
     spread: 0
     pierce: 0
@@ -468,6 +506,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 2
     spread: 0
     pierce: 0
@@ -481,6 +520,7 @@ MonoBehaviour:
     knockback: 5
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 3
     spread: 0
     pierce: 0
@@ -494,6 +534,7 @@ MonoBehaviour:
     knockback: 5
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 3
     spread: 0
     pierce: 0
@@ -507,6 +548,7 @@ MonoBehaviour:
     knockback: 3
     DoT: 1
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 0
     spread: 0
     pierce: 2
@@ -520,6 +562,7 @@ MonoBehaviour:
     knockback: 3
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 0
     spread: 0
     pierce: 3
@@ -533,6 +576,7 @@ MonoBehaviour:
     knockback: 0
     DoT: 10
     spinSpeed: 1
+    Thing: {fileID: 0}
     range: 4
     spread: 0
     pierce: 0
@@ -546,6 +590,7 @@ MonoBehaviour:
     knockback: 0
     DoT: 0
     spinSpeed: 1
+    Thing: {fileID: 0}
     range: 1
     spread: 0
     pierce: 0
@@ -559,6 +604,7 @@ MonoBehaviour:
     knockback: 0
     DoT: 10
     spinSpeed: 1
+    Thing: {fileID: 0}
     range: 0
     spread: 0
     pierce: 0
@@ -572,6 +618,7 @@ MonoBehaviour:
     knockback: 0
     DoT: 5
     spinSpeed: -1
+    Thing: {fileID: 0}
     range: 0
     spread: 0
     pierce: 1
@@ -585,6 +632,7 @@ MonoBehaviour:
     knockback: 0
     DoT: 5
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 0
     spread: 0
     pierce: 1
@@ -598,6 +646,7 @@ MonoBehaviour:
     knockback: 0
     DoT: 0
     spinSpeed: -1
+    Thing: {fileID: 0}
     range: 1
     spread: 0
     pierce: 0
@@ -611,6 +660,7 @@ MonoBehaviour:
     knockback: 5
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 4
     spread: 0
     pierce: 0
@@ -624,6 +674,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 0
     spinSpeed: 5
+    Thing: {fileID: 0}
     range: 10
     spread: 0
     pierce: 0
@@ -637,6 +688,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 100
     spinSpeed: 5
+    Thing: {fileID: 0}
     range: 3
     spread: 0
     pierce: 0
@@ -650,6 +702,7 @@ MonoBehaviour:
     knockback: 3
     DoT: 0
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 4
     spread: 0
     pierce: 0
@@ -663,6 +716,7 @@ MonoBehaviour:
     knockback: 5
     DoT: 10
     spinSpeed: 0
+    Thing: {fileID: 0}
     range: 4
     spread: 0
     pierce: 5
@@ -676,6 +730,7 @@ MonoBehaviour:
     knockback: -5
     DoT: 25
     spinSpeed: -0.1
+    Thing: {fileID: 0}
     range: 0
     spread: 0
     pierce: 9999
@@ -689,6 +744,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 100
     spinSpeed: 5
+    Thing: {fileID: 0}
     range: 5
     spread: 0
     pierce: 0
@@ -702,6 +758,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 100
     spinSpeed: -3
+    Thing: {fileID: 0}
     range: 0
     spread: 0
     pierce: 10
@@ -715,6 +772,7 @@ MonoBehaviour:
     knockback: 1
     DoT: 25
     spinSpeed: -1
+    Thing: {fileID: 0}
     range: 0
     spread: 25
     pierce: 3
@@ -728,6 +786,7 @@ MonoBehaviour:
     knockback: 2
     DoT: 0
     spinSpeed: 5
+    Thing: {fileID: 0}
     range: 5
     spread: 0
     pierce: 0
@@ -737,17 +796,18 @@ MonoBehaviour:
   currentWeapon:
     name: 
     type: 1
-    damage: 25
-    attackSpeed: 0.5
-    knockback: 0
+    damage: 50
+    attackSpeed: 1
+    knockback: -3
     DoT: 0
-    spinSpeed: -0.1
-    range: 1
-    spread: 1
-    pierce: 0
+    spinSpeed: 0
+    Thing: {fileID: 2168015242566886318, guid: 553cfe42e3c1155478a45466f6d52d28, type: 3}
+    range: 0
+    spread: 0
+    pierce: 10
     projectSpeed: 10
-    projectLife: 1
-    bullet: {fileID: 3719869906297901345, guid: ceadad82b17147a429804650cc574d1e, type: 3}
+    projectLife: 3
+    bullet: {fileID: 3719869906297901345, guid: 170c9d298bd89c542b0b81db926c143b, type: 3}
 --- !u!4 &24757400
 Transform:
   m_ObjectHideFlags: 0

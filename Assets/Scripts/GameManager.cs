@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,6 +15,9 @@ public class GameManager : MonoBehaviour
     [Header("Souls")]
     public Text text;
     public int Souls = 0;
+
+    [Header("InGame")]
+    public int Round = 1;
 
     private void Awake()
     {
